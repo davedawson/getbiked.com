@@ -1,0 +1,51 @@
+{% include 'includes/header' %}
+  <h1>{{title}}</h1>
+  <div class="photos">
+    {% if assets.size > 1 %}
+    <div class="flexslider">
+      <ul class="slides">
+        {% for asset in assets %}
+            <li><img src="{{asset.url}}"></li>
+        {% endfor %}
+        </ul>
+      </div>
+    {% else %}
+      <img src="{{asset.url}}">
+    {% endif %}
+  </div>
+  <dl>
+    <dt>Description:</dt>
+    <dd>{{body}}</dd>
+
+    <dt>Make &amp; model:</dt>
+    <dd>{{meta['Make & Model'] | markdown:true}}</dd>
+
+    <dt>Price:</dt>
+    <dd>{{meta['Price'] | markdown:true}}</dd>
+
+    <dt>Bike size:</dt>
+    <dd>{{meta['Bike size'] | markdown:true}}</dd>
+
+    <dt>Color:</dt>
+    <dd>{{meta['Color'] | markdown:true}}</dd>
+
+    <dt>Gears:</dt>
+    <dd>{{meta['Gears'] | markdown:true}}</dd>
+
+    <dt>Condition:</dt>
+    <dd>{{meta['Condition'] | markdown:true}}</dd>
+
+    <dt>Neighborhood:</dt>
+    <dd>{{meta['Neighborhood'] | markdown:true}}</dd>
+
+    <dt>Reason for selling:</dt>
+    <dd>{{meta['Reason for selling'] | markdown:true}}</dd>
+
+    <dt>Additional information:</dt>
+    <dd>{{meta['Additional information'] | markdown:true}}</dd>
+
+    <dt>Contact:</dt>
+    <dd>{{meta['Contact'] | markdown:true}}</dd>
+  </dl>
+
+{% include 'includes/footer' %}

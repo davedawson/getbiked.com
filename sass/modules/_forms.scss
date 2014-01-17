@@ -1,0 +1,83 @@
+input[type=email], input[type=text], input[type=tel], textarea {
+ @extend .textFieldClean;
+ border: 1px solid lighten($color-black, 80%);
+ padding: 0.6em 0.5em;
+ font-size: 1rem;
+ width: 100%;
+ &::-webkit-input-placeholder { font-style: italic; color: transparentize($color-black,0.4) }
+ &:-moz-placeholder { font-style: italic; }
+ &::-moz-placeholder { font-style: italic; }
+ &:-ms-input-placeholder { font-style: italic; }
+ @include transition(all 0.3s ease-in-out);
+}
+input[type=text]::-webkit-input-placeholder, input[type=email]::-webkit-input-placeholder, input[type=tel]::-webkit-input-placeholder {
+   color: transparentize($color-black, 0.7);
+}
+input[type=text]:-moz-placeholder, input[type=email]:-moz-placeholder, input[type=tel]:-moz-placeholder {
+   color: transparentize($color-black, 0.7);
+}
+input[type=text]::-moz-placeholder, input[type=email]::-moz-placeholder, input[type=tel]::-moz-placeholder {
+   color: transparentize($color-black, 0.7);
+}
+input[type=text]:-ms-input-placeholder, input[type=email]:-ms-input-placeholder, input[type=tel]:-ms-input-placeholder {
+   color: transparentize($color-black, 0.7);
+}
+textarea {
+   padding: 20px;
+}
+input[type=submit] {
+ background: $color-dark-blue;
+ color: $color-white;
+ padding: 1.1em 3%;
+ border: 0;
+ text-transform: uppercase;
+ letter-spacing: 0.2em;
+ -webkit-appearance: none;
+ @include transition(all 0.2s ease-in-out);
+ &:hover {
+   background: darken($color-dark-blue, 40%);
+   cursor: pointer;
+ }
+}
+
+form label {
+   font-family: $type-sans;
+   color: $color-dark-blue;
+   font-weight: 600;
+   font-size: 1.1rem;
+   margin-bottom: 5px;
+   display: block;
+   float: left;
+   width: 100%;
+   position: relative;
+   line-height: 1.4rem;
+   p {
+      @include respond-to(wide-screens) {
+         float: left;
+         width: 75%;
+      }
+   }
+   em {
+     display: block;
+     font-weight: 100;
+     font-style: italic;
+   }
+}
+
+.req {
+   color: $color-pink;
+   margin-left: 2px;
+   font-size: 0.9rem;
+   display: block;
+   font-weight: 100;
+   margin-top: 5px;
+   @include respond-to(wide-screens) {
+      float: right;
+      width: 20%;
+      text-align: right;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      margin-top: 0;
+   }
+}

@@ -1,0 +1,71 @@
+body {
+  background: transparentize($color-light-blue, 0.75);
+  color: $color-dark-blue;
+  text-rendering: optimizeLegibility;
+  position: relative;
+  height: 100%;
+}
+
+p, ol, ul, li, dl, dt, dd {
+  font-family: $type-sans;
+  font-size: 1.2rem;
+  line-height: 1.45rem;
+}
+p {
+  margin-bottom: 20px;
+}
+li {
+  list-style-type: disc;
+}
+h1 {
+  font-family: $type-display;
+  font-size: 42px;
+  margin-bottom: 20px;
+  @include respond-to(wide-screens) {
+    font-size: 64px
+  }
+  @include respond-to(medium-screens) {
+    font-size: 56px;
+  }
+}
+h2 {
+  font-family: $type-sans;
+  font-size: 32px;
+  font-weight: bold;
+}
+h3 {
+  font-family: $type-sans;
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 30px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+h4 {
+  font-family: $type-display;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+a {
+  color: $color-dark-blue;
+  font-weight: 500;
+  text-decoration: none;
+  @include transition(all 0.2s ease-in-out);
+  &:hover {
+      text-decoration: none;
+  }
+}
+
+strong {
+  font-weight: 600;
+}
+.hide {
+  display: none;
+}
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}

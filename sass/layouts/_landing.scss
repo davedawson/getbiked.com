@@ -1,0 +1,244 @@
+.landing {
+  .page-content {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+}
+.intro {
+  padding: 0;
+  width: 100%;
+  height: 300px;
+  @extend .cf;
+  background: $color-light-blue;
+  @include respond-to(wide-screens) {
+    height: 800px;
+  }
+  @include respond-to(medium-screens) {
+    height: 600px;
+  }
+  h1 {
+    color: $color-dark-blue;
+    font-size: 85px;
+    line-height: 70px;
+    text-align: left;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    @include transition(all 0.2s ease-in-out);
+    span {
+      display: block;
+    }
+    @include respond-to(wide-screens) {
+      font-size: 156px;
+      line-height: 128px;
+      margin-top: 160px;
+    }
+    @include respond-to(medium-screens) {
+      font-size: 130px;
+      line-height: 108px;
+    }
+  }
+  p {
+    font-size: 24px;
+    line-height: 28px;
+    text-align: left;
+    margin-bottom: 10px;
+    color: $color-black;
+    max-width: 640px;
+    @include transition(all 0.1s ease-in-out);
+  }
+  .hero {
+    width: 100%;
+    height: 200px;
+    background-image: url(/img/landing-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    @include respond-to(wide-screens) {
+      width: 35%;
+      float: left;
+      background-position: top right;
+      height: 840px;
+    }
+    @include respond-to(medium-screens) {
+      height: 800px;
+    }
+  }
+  .description{
+    height: 580px;
+    float: right;
+    // background: $color-white;
+    padding: 0 5%;
+    width: 100%;
+    padding-bottom: 50px;
+    @include borderBox;
+    @include respond-to(handhelds) {
+      // @extend .cf;
+    }
+    @include respond-to(wide-screens) {
+      height: 840px;
+      width: 65%;
+    }
+    @include respond-to(medium-screens) {
+      height: 800px;
+    }
+  }
+  input[type=email] {
+    width: 65%;
+    font-size: 0.9rem;
+    padding: 1.1em 2%;
+    background: $color-white;
+    float: left;
+    border: 0;
+    @include respond-to(wide-screens) {
+     // background: transparentize($color-white, 0.1);
+     font-size: 1.6rem;
+     &:hover {
+       background: $color-white;
+     }
+    }
+    @include respond-to(medium-screens) {
+      font-size: 1.35rem;
+      background: transparentize($color-white, 0.1);
+    }
+  }
+  input[type=submit] {
+    width: 35%;
+    float: right;
+    border: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 0.9rem;
+    -webkit-appearance: none;
+    @include transition(all 0.2s ease-in-out);
+    &:hover {
+      background: darken($color-dark-blue, 40%);
+      cursor: pointer;
+    }
+    @include transition(all 0.3s ease-in-out);
+    @include respond-to(wide-screens) {
+      font-size: 1.4rem;
+      padding: 1.85rem 5%;
+    }
+    @include respond-to(medium-screens) {
+      font-size: 1rem;
+      padding: 1.75rem 5%;
+    }
+  }
+}
+.landing {
+  .signup {
+  width: 100%;
+  margin: 20px auto;
+  padding: 0;
+  @extend .cf;
+  @include respond-to(wide-screens) {
+    width: 130%;
+    position: relative;
+    left: -50%;
+    //top: -180px;
+    background: none;
+    padding: 0;
+    margin: 60px auto;
+    margin-bottom: 160px;
+  }
+}
+.details {
+  clear: both;
+  background: url(/img/details-bg.jpg);
+  background-size: cover;
+  background-position: top left;
+  padding: 50px 5%;
+  width: 100%;
+  // border-top: 1px solid transparentize($color-dark-blue, 0.95);
+  @extend .cf;
+  h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: $color-dark-blue;
+    @include transition(all 0.2s ease-in-out);
+    @include respond-to(wide-screens) {
+      text-align: left;
+      float: left;
+      width: 40%;
+      max-width: 600px;
+      margin: 140px 2% 0 10%;
+      font-size: 60px;
+      line-height: 64px;
+    }
+  }
+  p, h3 {
+    font-size: 18px;
+    line-height: 24px;
+    position: relative;
+    z-index: 2;
+    color: $color-dark-blue;
+  }
+  h3 {
+    position: relative;
+    z-index: 2;
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+  .content {
+    padding: 40px 30px;
+    background: transparentize($color-white, 0.3);
+    border: 1px solid transparentize($color-black, 0.9);
+    @extent .cf;
+    @include respond-to(wide-screens) {
+      width: 35%;
+      float: right;
+    }
+  }
+  .search {
+    border-bottom: 5px solid transparentize($color-black, 0.9);
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+  }
+  .search .wrap, .sell .wrap {
+    padding: 30px 5% 30px 5%;
+    background-color: transparentize($color-blue, 0.1);
+    margin-bottom: 20px;
+    overflow: hidden;
+    position: relative;
+    top: -30px;
+    z-index: 2;
+
+  }
+  .sell {
+    margin-right: 0;
+  }
+  .ss-icon {
+    width: 100%;
+    font-size: 80px;
+    margin-right: 10px;
+    opacity: 0.6;
+    color: $color-white;
+    z-index: 1;
+    text-align: left;
+    line-height: 3em;
+    position: relative;
+    top: 20px;
+  }
+}
+
+.credit {
+  background: $color-black;
+  padding: 100px 5%;
+  p {
+    text-align: center;
+    color: transparentize($color-white, 0.4);
+    margin-bottom: 10px;
+  }
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+  background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+  background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+  background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+}
+
+
+}

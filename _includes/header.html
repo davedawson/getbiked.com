@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset=utf-8 />
+    <title>Get Biked</title>
+    <link href="favicon.ico" rel="icon" type="image/x-icon" />
+    <meta name="description" content="A hand picked email list of bikes for sale in New York City.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:" content="Get Biked"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="http://www.getbiked.com/"/>
+    <meta property="og:image" content="http://www.getbiked.com/img/gb-fb.jpg"/>
+    <meta property="og:site_name" content="Get Biked"/>
+    <meta property="fb:admins" content="iamdavedawson"/>
+    <meta property="og:description"
+          content="An email list of bikes for sale in New York City."/>
+    <!--[if lt IE 9]>
+      <script src="/js/html5shiv.js"></script>
+    <![endif]-->
+    <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
+
+    <!--[if IE]>
+        <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <![endif]-->
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    <script type="text/javascript" src="//use.typekit.net/yiu3nar.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-840462-28', 'getbiked.com');
+      ga('send', 'pageview');
+
+    </script>
+  </head>
+    <body{% if url == "/" %} class="landing"{% endif %}>
+    {% unless url == "/" %}{% include 'includes/navigation' %}{% endunless %}
+    <div class="page-content">
