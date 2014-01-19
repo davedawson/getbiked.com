@@ -9,6 +9,10 @@ $('.more-photos a').click(function(){
 
 $(window).load(function() {
     $('.flexslider').flexslider({
-        animation: "slide"
+        animation: "slide",
+        useCSS: true,
+        touch: true,
+        slideshow: true,
+        controlNav: false
       });
 });

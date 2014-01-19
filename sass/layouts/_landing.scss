@@ -63,7 +63,7 @@
       height: 800px;
     }
   }
-  .description{
+  .description {
     height: 580px;
     float: right;
     // background: $color-white;
@@ -127,19 +127,20 @@
 }
 .landing {
   .signup {
-  width: 100%;
-  margin: 20px auto;
-  padding: 0;
-  @extend .cf;
-  @include respond-to(wide-screens) {
-    width: 130%;
-    position: relative;
-    left: -50%;
-    //top: -180px;
-    background: none;
+    width: 100%;
+    margin: 20px auto;
     padding: 0;
-    margin: 60px auto;
-    margin-bottom: 160px;
+    @extend .cf;
+    @include respond-to(wide-screens) {
+      width: 130%;
+      position: relative;
+      left: -50%;
+      //top: -180px;
+      background: none;
+      padding: 0;
+      margin: 60px auto;
+      margin-bottom: 160px;
+    }
   }
 }
 .details {
@@ -240,5 +241,3 @@ hr {
   background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
 }
 
-
-}

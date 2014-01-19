@@ -1665,7 +1665,7 @@ html:hover .ss-icon {
 }
 
 /* line 19, ../sass/modules/_mixins.scss */
-.cf, .intro, .landing .signup, .landing .details {
+.cf, .intro, .landing .signup, .details, .bike-list article {
   content: "";
   display: table;
   clear: both;
@@ -1767,7 +1767,7 @@ input[type=submit]:hover {
 
 /* line 43, ../sass/modules/_forms.scss */
 form label {
-  font-family: "freight-sans-pro";
+  font-family: "ronnia", "freight-sans-pro";
   color: #0b1622;
   font-weight: 600;
   font-size: 1.1rem;
@@ -1839,17 +1839,356 @@ form label em {
 /* line 14, ../sass/modules/_elements.scss */
 .button:hover {
   background: black;
+  text-decoration: none;
 }
 
-/* line 19, ../sass/modules/_elements.scss */
+/* line 20, ../sass/modules/_elements.scss */
 .photos {
   margin: 20px 0;
 }
-/* line 21, ../sass/modules/_elements.scss */
+/* line 22, ../sass/modules/_elements.scss */
 .photos ul, .photos li {
   list-style-type: none;
 }
 
+/*
+ * jQuery FlexSlider v2.2.0
+ * http://www.woothemes.com/flexslider/
+ *
+ * Copyright 2012 WooThemes
+ * Free to use under the GPLv2 license.
+ * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * Contributing author: Tyler Smith (@mbmufffin)
+ */
+/* Browser Resets
+*********************************/
+/* line 18, ../sass/modules/_flexslider.scss */
+.flex-container a:active,
+.flexslider a:active,
+.flex-container a:focus,
+.flexslider a:focus {
+  outline: none;
+}
+
+/* line 21, ../sass/modules/_flexslider.scss */
+.slides,
+.flex-control-nav,
+.flex-direction-nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* FlexSlider Necessary Styles
+*********************************/
+/* line 26, ../sass/modules/_flexslider.scss */
+.flex-viewport {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+/* line 29, ../sass/modules/_flexslider.scss */
+.flexslider {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 30, ../sass/modules/_flexslider.scss */
+.flexslider .slides > li {
+  display: none;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Hide the slides before the JS is loaded. Avoids image jumping */
+/* line 31, ../sass/modules/_flexslider.scss */
+.flexslider .slides img {
+  width: 100%;
+  display: block;
+}
+
+/* line 32, ../sass/modules/_flexslider.scss */
+.flex-pauseplay span {
+  text-transform: capitalize;
+}
+
+/* Clearfix for the .slides element */
+/* line 35, ../sass/modules/_flexslider.scss */
+.slides:after {
+  content: "\0020";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+/* line 36, ../sass/modules/_flexslider.scss */
+html[xmlns] .slides {
+  display: block;
+}
+
+/* line 37, ../sass/modules/_flexslider.scss */
+* html .slides {
+  height: 1%;
+}
+
+/* No JavaScript Fallback */
+/* If you are not using another script, such as Modernizr, make sure you
+ * include js that eliminates this class on page load */
+/* line 42, ../sass/modules/_flexslider.scss */
+.no-js .slides > li:first-child {
+  display: block;
+}
+
+/* FlexSlider Default Theme
+*********************************/
+/* line 46, ../sass/modules/_flexslider.scss */
+.flexslider {
+  margin: 0 0 60px;
+  background: #fff;
+  border: 4px solid #fff;
+  position: relative;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  zoom: 1;
+}
+
+/* line 47, ../sass/modules/_flexslider.scss */
+.flex-viewport {
+  max-height: 2000px;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+/* line 48, ../sass/modules/_flexslider.scss */
+.loading .flex-viewport {
+  max-height: 300px;
+}
+
+/* line 49, ../sass/modules/_flexslider.scss */
+.flexslider .slides {
+  zoom: 1;
+}
+
+/* line 50, ../sass/modules/_flexslider.scss */
+.carousel li {
+  margin-right: 5px;
+}
+
+/* Direction Nav */
+/* line 53, ../sass/modules/_flexslider.scss */
+.flex-direction-nav {
+  *height: 0;
+}
+
+/* line 54, ../sass/modules/_flexslider.scss */
+.flex-direction-nav a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin: -20px 0 0;
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  overflow: hidden;
+  opacity: 0;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.8);
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+/* line 55, ../sass/modules/_flexslider.scss */
+.flex-direction-nav .flex-prev {
+  left: -50px;
+}
+
+/* line 56, ../sass/modules/_flexslider.scss */
+.flex-direction-nav .flex-next {
+  right: -50px;
+  text-align: right;
+}
+
+/* line 57, ../sass/modules/_flexslider.scss */
+.flexslider:hover .flex-prev {
+  opacity: 0.7;
+  left: 10px;
+}
+
+/* line 58, ../sass/modules/_flexslider.scss */
+.flexslider:hover .flex-next {
+  opacity: 0.7;
+  right: 10px;
+}
+
+/* line 59, ../sass/modules/_flexslider.scss */
+.flexslider:hover .flex-next:hover, .flexslider:hover .flex-prev:hover {
+  opacity: 1;
+}
+
+/* line 60, ../sass/modules/_flexslider.scss */
+.flex-direction-nav .flex-disabled {
+  opacity: 0 !important;
+  filter: alpha(opacity=0);
+  cursor: default;
+}
+
+/* line 61, ../sass/modules/_flexslider.scss */
+.flex-direction-nav a:before {
+  font-family: "flexslider-icon";
+  font-size: 40px;
+  display: inline-block;
+  content: '\f001';
+  margin: 10px 0;
+}
+
+/* line 62, ../sass/modules/_flexslider.scss */
+.flex-direction-nav a.flex-next:before {
+  content: '\f002';
+}
+
+/* Pause/Play */
+/* line 65, ../sass/modules/_flexslider.scss */
+.flex-pauseplay a {
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  bottom: 5px;
+  left: 10px;
+  opacity: 0.8;
+  z-index: 10;
+  overflow: hidden;
+  cursor: pointer;
+  color: #000;
+}
+
+/* line 66, ../sass/modules/_flexslider.scss */
+.flex-pauseplay a:before {
+  font-family: "flexslider-icon";
+  font-size: 20px;
+  display: inline-block;
+  content: '\f004';
+}
+
+/* line 67, ../sass/modules/_flexslider.scss */
+.flex-pauseplay a:hover {
+  opacity: 1;
+}
+
+/* line 68, ../sass/modules/_flexslider.scss */
+.flex-pauseplay a.flex-play:before {
+  content: '\f003';
+}
+
+/* Control Nav */
+/* line 71, ../sass/modules/_flexslider.scss */
+.flex-control-nav {
+  width: 100%;
+  position: absolute;
+  bottom: -40px;
+  text-align: center;
+}
+
+/* line 72, ../sass/modules/_flexslider.scss */
+.flex-control-nav li {
+  margin: 0 6px;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+}
+
+/* line 73, ../sass/modules/_flexslider.scss */
+.flex-control-paging li a {
+  width: 11px;
+  height: 11px;
+  display: block;
+  background: #666;
+  background: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  text-indent: -9999px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -o-border-radius: 20px;
+  border-radius: 20px;
+  -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+}
+
+/* line 74, ../sass/modules/_flexslider.scss */
+.flex-control-paging li a:hover {
+  background: #333;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+/* line 75, ../sass/modules/_flexslider.scss */
+.flex-control-paging li a.flex-active {
+  background: #000;
+  background: rgba(0, 0, 0, 0.9);
+  cursor: default;
+}
+
+/* line 77, ../sass/modules/_flexslider.scss */
+.flex-control-thumbs {
+  margin: 5px 0 0;
+  position: static;
+  overflow: hidden;
+}
+
+/* line 78, ../sass/modules/_flexslider.scss */
+.flex-control-thumbs li {
+  width: 25%;
+  float: left;
+  margin: 0;
+}
+
+/* line 79, ../sass/modules/_flexslider.scss */
+.flex-control-thumbs img {
+  width: 100%;
+  display: block;
+  opacity: .7;
+  cursor: pointer;
+}
+
+/* line 80, ../sass/modules/_flexslider.scss */
+.flex-control-thumbs img:hover {
+  opacity: 1;
+}
+
+/* line 81, ../sass/modules/_flexslider.scss */
+.flex-control-thumbs .flex-active {
+  opacity: 1;
+  cursor: default;
+}
+
+@media screen and (max-width: 860px) {
+  /* line 84, ../sass/modules/_flexslider.scss */
+  .flex-direction-nav .flex-prev {
+    opacity: 1;
+    left: 10px;
+  }
+
+  /* line 85, ../sass/modules/_flexslider.scss */
+  .flex-direction-nav .flex-next {
+    opacity: 1;
+    right: 10px;
+  }
+}
 /* line 1, ../sass/layouts/_header.scss */
 .header {
   width: 100%;
@@ -1864,12 +2203,17 @@ form label em {
     float: left;
     background-position: top right;
     height: 100%;
+    z-index: 2;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
   }
 }
-/* line 17, ../sass/layouts/_header.scss */
+/* line 18, ../sass/layouts/_header.scss */
+.header a:hover {
+  text-decoration: none;
+}
+/* line 21, ../sass/layouts/_header.scss */
 .header h1 {
   color: white;
   width: 100%;
@@ -1880,6 +2224,7 @@ form label em {
   padding: 50px 15%;
   font-size: 24px;
   position: relative;
+  font-weight: 200;
   min-height: 0;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
@@ -1897,28 +2242,28 @@ form label em {
 .header h1:after {
   clear: both;
 }
-/* line 29, ../sass/layouts/_header.scss */
+/* line 35, ../sass/layouts/_header.scss */
 .header h1 span {
   display: block;
 }
-/* line 32, ../sass/layouts/_header.scss */
+/* line 38, ../sass/layouts/_header.scss */
 .header h1 img {
   width: 100%;
   margin: 0 auto;
 }
 @media only screen and (min-width: 641px) and (max-width: 971px) {
-  /* line 32, ../sass/layouts/_header.scss */
+  /* line 38, ../sass/layouts/_header.scss */
   .header h1 img {
     float: left;
     width: 50%;
   }
 }
-/* line 40, ../sass/layouts/_header.scss */
+/* line 46, ../sass/layouts/_header.scss */
 .header h1 p {
   margin-left: 4%;
 }
 @media only screen and (min-width: 641px) and (max-width: 971px) {
-  /* line 47, ../sass/layouts/_header.scss */
+  /* line 53, ../sass/layouts/_header.scss */
   .header h1 p {
     margin-bottom: 0px;
     position: absolute;
@@ -1929,36 +2274,36 @@ form label em {
     font-size: 24px;
   }
 }
-/* line 58, ../sass/layouts/_header.scss */
+/* line 64, ../sass/layouts/_header.scss */
 .header .description {
   padding: 25px 10%;
 }
-/* line 60, ../sass/layouts/_header.scss */
+/* line 66, ../sass/layouts/_header.scss */
 .header .description p {
   color: white;
 }
-/* line 63, ../sass/layouts/_header.scss */
+/* line 69, ../sass/layouts/_header.scss */
 .header .description ul, .header .description li {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
-/* line 68, ../sass/layouts/_header.scss */
+/* line 74, ../sass/layouts/_header.scss */
 .header .description .button {
   margin-bottom: 1em;
 }
 @media only screen and (min-width: 972px) {
-  /* line 68, ../sass/layouts/_header.scss */
+  /* line 74, ../sass/layouts/_header.scss */
   .header .description .button {
     width: 100%;
     float: left;
   }
-  /* line 73, ../sass/layouts/_header.scss */
+  /* line 79, ../sass/layouts/_header.scss */
   .header .description .button.sell {
     float: right;
   }
 }
-/* line 80, ../sass/layouts/_header.scss */
+/* line 86, ../sass/layouts/_header.scss */
 .header .signup p {
   font-size: 14px;
   line-height: 18px;
@@ -1970,7 +2315,7 @@ form label em {
 
 /* line 1, ../sass/layouts/_global.scss */
 body {
-  background: rgba(230, 253, 253, 0.25);
+  background: rgba(230, 253, 253, 0.1);
   color: #0b1622;
   text-rendering: optimizeLegibility;
   position: relative;
@@ -1979,7 +2324,7 @@ body {
 
 /* line 9, ../sass/layouts/_global.scss */
 p, ol, ul, li, dl, dt, dd {
-  font-family: "freight-sans-pro";
+  font-family: "ronnia", "freight-sans-pro";
   font-size: 1.2rem;
   line-height: 1.45rem;
 }
@@ -1996,9 +2341,10 @@ li {
 
 /* line 20, ../sass/layouts/_global.scss */
 h1 {
-  font-family: "lust-display-didone";
+  font-family: "ronnia", "freight-sans-pro";
   font-size: 42px;
   margin-bottom: 20px;
+  font-weight: 900;
 }
 @media only screen and (min-width: 972px) {
   /* line 20, ../sass/layouts/_global.scss */
@@ -2013,16 +2359,16 @@ h1 {
   }
 }
 
-/* line 31, ../sass/layouts/_global.scss */
+/* line 32, ../sass/layouts/_global.scss */
 h2 {
-  font-family: "freight-sans-pro";
+  font-family: "ronnia", "freight-sans-pro";
   font-size: 32px;
   font-weight: bold;
 }
 
-/* line 36, ../sass/layouts/_global.scss */
+/* line 37, ../sass/layouts/_global.scss */
 h3 {
-  font-family: "freight-sans-pro";
+  font-family: "ronnia", "freight-sans-pro";
   font-size: 26px;
   font-weight: 600;
   line-height: 30px;
@@ -2030,43 +2376,37 @@ h3 {
   margin-bottom: 10px;
 }
 
-/* line 45, ../sass/layouts/_global.scss */
+/* line 46, ../sass/layouts/_global.scss */
 h4 {
-  font-family: "lust-display-didone";
+  font-family: "ronnia", "freight-sans-pro";
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 900;
   margin-bottom: 10px;
 }
 
-/* line 52, ../sass/layouts/_global.scss */
+/* line 53, ../sass/layouts/_global.scss */
 a {
   color: #0b1622;
-  font-weight: 500;
+  font-weight: 600;
   text-decoration: none;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
-/* line 57, ../sass/layouts/_global.scss */
+/* line 58, ../sass/layouts/_global.scss */
 a:hover {
-  text-decoration: none;
+  text-decoration: underline;
 }
 
-/* line 62, ../sass/layouts/_global.scss */
+/* line 63, ../sass/layouts/_global.scss */
 strong {
   font-weight: 600;
 }
 
-/* line 65, ../sass/layouts/_global.scss */
+/* line 66, ../sass/layouts/_global.scss */
 .hide {
   display: none;
-}
-
-/* line 68, ../sass/layouts/_global.scss */
-.container {
-  max-width: 800px;
-  margin: 0 auto;
 }
 
 /* line 2, ../sass/layouts/_landing.scss */
@@ -2269,8 +2609,9 @@ strong {
     margin-bottom: 160px;
   }
 }
-/* line 145, ../sass/layouts/_landing.scss */
-.landing .details {
+
+/* line 146, ../sass/layouts/_landing.scss */
+.details {
   clear: both;
   background: url(/img/details-bg.jpg);
   background-size: cover;
@@ -2278,8 +2619,8 @@ strong {
   padding: 50px 5%;
   width: 100%;
 }
-/* line 154, ../sass/layouts/_landing.scss */
-.landing .details h2 {
+/* line 155, ../sass/layouts/_landing.scss */
+.details h2 {
   text-align: center;
   margin-bottom: 40px;
   color: #0b1622;
@@ -2289,8 +2630,8 @@ strong {
   transition: all 0.2s ease-in-out;
 }
 @media only screen and (min-width: 972px) {
-  /* line 154, ../sass/layouts/_landing.scss */
-  .landing .details h2 {
+  /* line 155, ../sass/layouts/_landing.scss */
+  .details h2 {
     text-align: left;
     float: left;
     width: 40%;
@@ -2300,43 +2641,43 @@ strong {
     line-height: 64px;
   }
 }
-/* line 169, ../sass/layouts/_landing.scss */
-.landing .details p, .landing .details h3 {
+/* line 170, ../sass/layouts/_landing.scss */
+.details p, .details h3 {
   font-size: 18px;
   line-height: 24px;
   position: relative;
   z-index: 2;
   color: #0b1622;
 }
-/* line 176, ../sass/layouts/_landing.scss */
-.landing .details h3 {
+/* line 177, ../sass/layouts/_landing.scss */
+.details h3 {
   position: relative;
   z-index: 2;
   font-size: 30px;
   margin-bottom: 10px;
 }
-/* line 182, ../sass/layouts/_landing.scss */
-.landing .details .content {
+/* line 183, ../sass/layouts/_landing.scss */
+.details .content {
   padding: 40px 30px;
   background: rgba(255, 255, 255, 0.7);
   border: 1px solid rgba(0, 0, 0, 0.1);
   @extent .cf;
 }
 @media only screen and (min-width: 972px) {
-  /* line 182, ../sass/layouts/_landing.scss */
-  .landing .details .content {
+  /* line 183, ../sass/layouts/_landing.scss */
+  .details .content {
     width: 35%;
     float: right;
   }
 }
-/* line 192, ../sass/layouts/_landing.scss */
-.landing .details .search {
+/* line 193, ../sass/layouts/_landing.scss */
+.details .search {
   border-bottom: 5px solid rgba(0, 0, 0, 0.1);
   padding-bottom: 30px;
   margin-bottom: 30px;
 }
-/* line 197, ../sass/layouts/_landing.scss */
-.landing .details .search .wrap, .landing .details .sell .wrap {
+/* line 198, ../sass/layouts/_landing.scss */
+.details .search .wrap, .details .sell .wrap {
   padding: 30px 5% 30px 5%;
   background-color: rgba(31, 50, 70, 0.9);
   margin-bottom: 20px;
@@ -2345,12 +2686,12 @@ strong {
   top: -30px;
   z-index: 2;
 }
-/* line 207, ../sass/layouts/_landing.scss */
-.landing .details .sell {
+/* line 208, ../sass/layouts/_landing.scss */
+.details .sell {
   margin-right: 0;
 }
-/* line 210, ../sass/layouts/_landing.scss */
-.landing .details .ss-icon {
+/* line 211, ../sass/layouts/_landing.scss */
+.details .ss-icon {
   width: 100%;
   font-size: 80px;
   margin-right: 10px;
@@ -2362,19 +2703,21 @@ strong {
   position: relative;
   top: 20px;
 }
-/* line 224, ../sass/layouts/_landing.scss */
-.landing .credit {
+
+/* line 225, ../sass/layouts/_landing.scss */
+.credit {
   background: black;
   padding: 100px 5%;
 }
-/* line 227, ../sass/layouts/_landing.scss */
-.landing .credit p {
+/* line 228, ../sass/layouts/_landing.scss */
+.credit p {
   text-align: center;
   color: rgba(255, 255, 255, 0.6);
   margin-bottom: 10px;
 }
-/* line 234, ../sass/layouts/_landing.scss */
-.landing hr {
+
+/* line 235, ../sass/layouts/_landing.scss */
+hr {
   border: 0;
   height: 1px;
   background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
@@ -2384,7 +2727,7 @@ strong {
 }
 
 /* line 1, ../sass/layouts/_interiors.scss */
-.page-content {
+.page-content, .page-header {
   width: 100%;
   max-width: 1200px;
   height: 100%;
@@ -2392,417 +2735,202 @@ strong {
 }
 @media only screen and (min-width: 972px) {
   /* line 1, ../sass/layouts/_interiors.scss */
-  .page-content {
-    width: 100%;
+  .page-content, .page-header {
+    width: 70%;
     float: left;
-    padding-left: 30%;
+    padding-left: 4%;
+    padding-right: 4%;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
   }
 }
 
-/* line 14, ../sass/layouts/_interiors.scss */
+/* line 15, ../sass/layouts/_interiors.scss */
+.page-header {
+  padding: 50px 4% 20px;
+  background-color: white;
+}
+@media only screen and (min-width: 972px) {
+  /* line 15, ../sass/layouts/_interiors.scss */
+  .page-header {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    width: 75%;
+    max-width: none;
+  }
+}
+/* line 23, ../sass/layouts/_interiors.scss */
+.page-header h1 {
+  font-size: 50px;
+}
+
+/* line 27, ../sass/layouts/_interiors.scss */
+.bike-list .page-content {
+  max-width: 1600px;
+}
+
+@media only screen and (min-width: 972px) {
+  /* line 30, ../sass/layouts/_interiors.scss */
+  .sidebar-spacing {
+    width: 25%;
+    max-width: 350px;
+    display: block;
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    float: left;
+    height: 1000px;
+  }
+}
+
+/* line 42, ../sass/layouts/_interiors.scss */
 dt {
   font-weight: bold;
 }
 @media only screen and (min-width: 972px) {
-  /* line 14, ../sass/layouts/_interiors.scss */
+  /* line 42, ../sass/layouts/_interiors.scss */
   dt {
     float: left;
     width: 35%;
   }
 }
 
-/* line 24, ../sass/layouts/_interiors.scss */
+/* line 52, ../sass/layouts/_interiors.scss */
 dd {
   overflow: hidden;
 }
 
-/*
- * jQuery FlexSlider v2.2.0
- * http://www.woothemes.com/flexslider/
- *
- * Copyright 2012 WooThemes
- * Free to use under the GPLv2 license.
- * http://www.gnu.org/licenses/gpl-2.0.html
- *
- * Contributing author: Tyler Smith (@mbmufffin)
- */
-/* Browser Resets
-*********************************/
-/* line 45, ../sass/layouts/_interiors.scss */
-.flex-container a:active,
-.flexslider a:active,
-.flex-container a:focus,
-.flexslider a:focus {
-  outline: none;
-}
-
-/* line 48, ../sass/layouts/_interiors.scss */
-.slides,
-.flex-control-nav,
-.flex-direction-nav {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-/* FlexSlider Necessary Styles
-*********************************/
-/* line 53, ../sass/layouts/_interiors.scss */
-.flexslider {
-  margin: 0;
-  padding: 0;
-}
-
-/* line 54, ../sass/layouts/_interiors.scss */
-.flexslider .slides > li {
-  display: none;
-  -webkit-backface-visibility: hidden;
-}
-
-/* Hide the slides before the JS is loaded. Avoids image jumping */
-/* line 55, ../sass/layouts/_interiors.scss */
-.flexslider .slides img {
-  width: 100%;
-  display: block;
-}
-
-/* line 56, ../sass/layouts/_interiors.scss */
-.flex-pauseplay span {
-  text-transform: capitalize;
-}
-
-/* Clearfix for the .slides element */
-/* line 59, ../sass/layouts/_interiors.scss */
-.slides:after {
-  content: "\0020";
-  display: block;
-  clear: both;
-  visibility: hidden;
-  line-height: 0;
-  height: 0;
-}
-
-/* line 60, ../sass/layouts/_interiors.scss */
-html[xmlns] .slides {
-  display: block;
-}
-
-/* line 61, ../sass/layouts/_interiors.scss */
-* html .slides {
-  height: 1%;
-}
-
-/* No JavaScript Fallback */
-/* If you are not using another script, such as Modernizr, make sure you
- * include js that eliminates this class on page load */
-/* line 66, ../sass/layouts/_interiors.scss */
-.no-js .slides > li:first-child {
-  display: block;
-}
-
-/* FlexSlider Default Theme
-*********************************/
-/* line 70, ../sass/layouts/_interiors.scss */
-.flexslider {
-  margin: 0 0 60px;
-  background: #fff;
-  border: 4px solid #fff;
-  position: relative;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -o-border-radius: 4px;
-  border-radius: 4px;
-  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-  -o-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-  zoom: 1;
-}
-
-/* line 71, ../sass/layouts/_interiors.scss */
-.flex-viewport {
-  max-height: 2000px;
-  -webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
-  -o-transition: all 1s ease;
-  transition: all 1s ease;
-}
-
-/* line 72, ../sass/layouts/_interiors.scss */
-.loading .flex-viewport {
-  max-height: 300px;
-}
-
-/* line 73, ../sass/layouts/_interiors.scss */
-.flexslider .slides {
-  zoom: 1;
-}
-
-/* line 74, ../sass/layouts/_interiors.scss */
-.carousel li {
-  margin-right: 5px;
-}
-
-/* Direction Nav */
-/* line 77, ../sass/layouts/_interiors.scss */
-.flex-direction-nav {
-  *height: 0;
-}
-
-/* line 78, ../sass/layouts/_interiors.scss */
-.flex-direction-nav a {
-  display: block;
-  width: 40px;
-  height: 40px;
-  margin: -20px 0 0;
-  position: absolute;
-  top: 50%;
-  z-index: 10;
-  overflow: hidden;
-  opacity: 0;
-  cursor: pointer;
-  color: rgba(0, 0, 0, 0.8);
-  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
-  -webkit-transition: all .3s ease;
-  -moz-transition: all .3s ease;
-  transition: all .3s ease;
-}
-
-/* line 79, ../sass/layouts/_interiors.scss */
-.flex-direction-nav .flex-prev {
-  left: -50px;
-}
-
-/* line 80, ../sass/layouts/_interiors.scss */
-.flex-direction-nav .flex-next {
-  right: -50px;
-  text-align: right;
-}
-
-/* line 81, ../sass/layouts/_interiors.scss */
-.flexslider:hover .flex-prev {
-  opacity: 0.7;
-  left: 10px;
-}
-
-/* line 82, ../sass/layouts/_interiors.scss */
-.flexslider:hover .flex-next {
-  opacity: 0.7;
-  right: 10px;
-}
-
-/* line 83, ../sass/layouts/_interiors.scss */
-.flexslider:hover .flex-next:hover, .flexslider:hover .flex-prev:hover {
-  opacity: 1;
-}
-
-/* line 84, ../sass/layouts/_interiors.scss */
-.flex-direction-nav .flex-disabled {
-  opacity: 0 !important;
-  filter: alpha(opacity=0);
-  cursor: default;
-}
-
-/* line 85, ../sass/layouts/_interiors.scss */
-.flex-direction-nav a:before {
-  font-family: "flexslider-icon";
-  font-size: 40px;
-  display: inline-block;
-  content: '\f001';
-  margin: 10px 0;
-}
-
-/* line 86, ../sass/layouts/_interiors.scss */
-.flex-direction-nav a.flex-next:before {
-  content: '\f002';
-}
-
-/* Pause/Play */
-/* line 89, ../sass/layouts/_interiors.scss */
-.flex-pauseplay a {
-  display: block;
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  bottom: 5px;
-  left: 10px;
-  opacity: 0.8;
-  z-index: 10;
-  overflow: hidden;
-  cursor: pointer;
-  color: #000;
-}
-
-/* line 90, ../sass/layouts/_interiors.scss */
-.flex-pauseplay a:before {
-  font-family: "flexslider-icon";
-  font-size: 20px;
-  display: inline-block;
-  content: '\f004';
-}
-
-/* line 91, ../sass/layouts/_interiors.scss */
-.flex-pauseplay a:hover {
-  opacity: 1;
-}
-
-/* line 92, ../sass/layouts/_interiors.scss */
-.flex-pauseplay a.flex-play:before {
-  content: '\f003';
-}
-
-/* Control Nav */
-/* line 95, ../sass/layouts/_interiors.scss */
-.flex-control-nav {
-  width: 100%;
-  position: absolute;
-  bottom: -40px;
-  text-align: center;
-}
-
-/* line 96, ../sass/layouts/_interiors.scss */
-.flex-control-nav li {
-  margin: 0 6px;
-  display: inline-block;
-  zoom: 1;
-  *display: inline;
-}
-
-/* line 97, ../sass/layouts/_interiors.scss */
-.flex-control-paging li a {
-  width: 11px;
-  height: 11px;
-  display: block;
-  background: #666;
-  background: rgba(0, 0, 0, 0.5);
-  cursor: pointer;
-  text-indent: -9999px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  -o-border-radius: 20px;
-  border-radius: 20px;
-  -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
-  -o-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
-  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
-}
-
-/* line 98, ../sass/layouts/_interiors.scss */
-.flex-control-paging li a:hover {
-  background: #333;
-  background: rgba(0, 0, 0, 0.7);
-}
-
-/* line 99, ../sass/layouts/_interiors.scss */
-.flex-control-paging li a.flex-active {
-  background: #000;
-  background: rgba(0, 0, 0, 0.9);
-  cursor: default;
-}
-
-/* line 101, ../sass/layouts/_interiors.scss */
-.flex-control-thumbs {
-  margin: 5px 0 0;
-  position: static;
-  overflow: hidden;
-}
-
-/* line 102, ../sass/layouts/_interiors.scss */
-.flex-control-thumbs li {
-  width: 25%;
-  float: left;
-  margin: 0;
-}
-
-/* line 103, ../sass/layouts/_interiors.scss */
-.flex-control-thumbs img {
-  width: 100%;
-  display: block;
-  opacity: .7;
-  cursor: pointer;
-}
-
-/* line 104, ../sass/layouts/_interiors.scss */
-.flex-control-thumbs img:hover {
-  opacity: 1;
-}
-
-/* line 105, ../sass/layouts/_interiors.scss */
-.flex-control-thumbs .flex-active {
-  opacity: 1;
-  cursor: default;
-}
-
-@media screen and (max-width: 860px) {
-  /* line 108, ../sass/layouts/_interiors.scss */
-  .flex-direction-nav .flex-prev {
-    opacity: 1;
-    left: 10px;
-  }
-
-  /* line 109, ../sass/layouts/_interiors.scss */
-  .flex-direction-nav .flex-next {
-    opacity: 1;
-    right: 10px;
-  }
-}
 /* line 2, ../sass/layouts/_bikes.scss */
 .bike-list article {
-  margin: 40px 0;
+  margin: 0;
+  padding: 40px 1%;
   padding-bottom: 40px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  width: 100%;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
-/* line 7, ../sass/layouts/_bikes.scss */
-.bike-list h2 {
-  margin: 40px 0 20px;
+/* line 12, ../sass/layouts/_bikes.scss */
+.bike-list article:hover {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
-/* line 10, ../sass/layouts/_bikes.scss */
+/* line 17, ../sass/layouts/_bikes.scss */
+.bike-list dt, .bike-list dd {
+  display: block;
+  float: none;
+  width: 100%;
+  font-size: 1rem;
+}
+/* line 22, ../sass/layouts/_bikes.scss */
+.bike-list dt p, .bike-list dd p {
+  font-size: 1rem;
+  line-height: 1.2rem;
+  margin-bottom: 10px;
+}
+/* line 31, ../sass/layouts/_bikes.scss */
 .bike-list .photos {
   width: 45%;
   float: left;
-  margin: 0 20px 30px 0;
+  margin: 0 4% 30px 0;
 }
-/* line 15, ../sass/layouts/_bikes.scss */
+/* line 35, ../sass/layouts/_bikes.scss */
+.bike-list .photos img {
+  width: 100%;
+}
+/* line 39, ../sass/layouts/_bikes.scss */
 .bike-list .flexslider {
   margin: 0;
 }
+@media only screen and (min-width: 641px) and (max-width: 971px) {
+  /* line 42, ../sass/layouts/_bikes.scss */
+  .bike-list .bike-description {
+    width: 50%;
+    float: left;
+  }
+}
+@media only screen and (min-width: 972px) {
+  /* line 42, ../sass/layouts/_bikes.scss */
+  .bike-list .bike-description {
+    width: 50%;
+    float: left;
+  }
+}
+/* line 51, ../sass/layouts/_bikes.scss */
+.bike-list .bike-description ul {
+  margin: 20px 0 0;
+}
+/* line 55, ../sass/layouts/_bikes.scss */
+.bike-list .bike-description li {
+  list-style-type: none;
+}
+@media only screen and (min-width: 641px) and (max-width: 971px) {
+  /* line 55, ../sass/layouts/_bikes.scss */
+  .bike-list .bike-description li {
+    float: left;
+    width: 44%;
+    margin-right: 3%;
+    margin-bottom: 0;
+  }
+}
+@media only screen and (min-width: 972px) {
+  /* line 55, ../sass/layouts/_bikes.scss */
+  .bike-list .bike-description li {
+    float: left;
+    width: 44%;
+    margin-right: 3%;
+    margin-bottom: 0;
+  }
+}
+/* line 71, ../sass/layouts/_bikes.scss */
+.bike-list .button {
+  clear: both;
+  font-size: 14px;
+  padding: 5px 16px 3px;
+  width: 100%;
+  margin-top: 10px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+@media only screen and (min-width: 972px) {
+  /* line 71, ../sass/layouts/_bikes.scss */
+  .bike-list .button {
+    width: inherit;
+    float: left;
+  }
+}
 
-/* line 1, ../sass/layouts/_list.scss */
-.submit {
-  background: #0b1622;
-  padding: 150px 0;
-}
-/* line 4, ../sass/layouts/_list.scss */
-.submit h1, .submit h2, .submit h3, .submit h4 {
-  color: white;
-}
-/* line 7, ../sass/layouts/_list.scss */
+/* line 2, ../sass/layouts/_list.scss */
 .submit h2 {
   font-weight: 100;
   font-style: normal;
   font-size: 3rem;
 }
 @media only screen and (min-width: 972px) {
-  /* line 7, ../sass/layouts/_list.scss */
+  /* line 2, ../sass/layouts/_list.scss */
   .submit h2 {
     font-size: 5em;
   }
 }
-/* line 14, ../sass/layouts/_list.scss */
+/* line 9, ../sass/layouts/_list.scss */
 .submit h2 span {
   display: block;
   font-size: 1em;
 }
-/* line 21, ../sass/layouts/_list.scss */
+/* line 16, ../sass/layouts/_list.scss */
 .submit h3 {
   color: #666666;
   font-weight: 100;
   margin-top: 5px;
 }
-/* line 26, ../sass/layouts/_list.scss */
+/* line 21, ../sass/layouts/_list.scss */
 .submit h4 {
   margin-top: 60px;
   font-weight: 900;
@@ -2811,28 +2939,26 @@ html[xmlns] .slides {
   display: block;
   float: none;
   color: #0b1622;
-  font-size: 3em;
+  font-size: 2.5em;
   line-height: 1em;
 }
-/* line 36, ../sass/layouts/_list.scss */
+/* line 31, ../sass/layouts/_list.scss */
 .submit h4 span {
   display: block;
   font-size: 1em;
 }
-/* line 43, ../sass/layouts/_list.scss */
+/* line 38, ../sass/layouts/_list.scss */
 .submit p {
   margin: 0;
 }
-/* line 46, ../sass/layouts/_list.scss */
+/* line 41, ../sass/layouts/_list.scss */
 .submit .lead-in {
-  color: rgba(255, 255, 255, 0.8);
+  color: #666666;
   margin-top: 40px;
   float: left;
 }
-/* line 52, ../sass/layouts/_list.scss */
+/* line 47, ../sass/layouts/_list.scss */
 .submit form {
-  width: 90%;
-  max-width: 1200px;
   margin: 0 auto;
   min-height: 0;
 }
@@ -2847,19 +2973,14 @@ html[xmlns] .slides {
 .submit form:after {
   clear: both;
 }
-@media only screen and (min-width: 972px) {
-  /* line 52, ../sass/layouts/_list.scss */
-  .submit form {
-    width: 70%;
-  }
-}
-/* line 61, ../sass/layouts/_list.scss */
+/* line 53, ../sass/layouts/_list.scss */
 .submit form ul {
   padding: 0 10% 40px;
   margin-top: 20px;
   clear: both;
   float: left;
-  background: #e6fdfd;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   min-height: 0;
 }
 /* line 33, ../sass/modules/_mixins.scss */
@@ -2873,28 +2994,28 @@ html[xmlns] .slides {
 .submit form ul:after {
   clear: both;
 }
-/* line 71, ../sass/layouts/_list.scss */
+/* line 64, ../sass/layouts/_list.scss */
 .submit form ul li {
   margin: 20px 0;
   clear: both;
   list-style-type: none;
 }
 @media only screen and (min-width: 972px) {
-  /* line 76, ../sass/layouts/_list.scss */
+  /* line 69, ../sass/layouts/_list.scss */
   .submit .name input {
     width: 49%;
   }
 }
-/* line 80, ../sass/layouts/_list.scss */
+/* line 73, ../sass/layouts/_list.scss */
 .submit .name input.fn {
   margin-right: 1%;
 }
-/* line 84, ../sass/layouts/_list.scss */
+/* line 77, ../sass/layouts/_list.scss */
 .submit input[type=submit] {
   width: 100%;
   font-size: 1.3rem;
 }
-/* line 88, ../sass/layouts/_list.scss */
+/* line 81, ../sass/layouts/_list.scss */
 .submit .photo-wrap {
   margin-top: 10px;
   float: left;
@@ -2910,50 +3031,50 @@ html[xmlns] .slides {
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-/* line 99, ../sass/layouts/_list.scss */
+/* line 92, ../sass/layouts/_list.scss */
 .submit .photo-wrap:hover {
   border: 2px dashed rgba(11, 22, 34, 0.3);
   cursor: pointer;
 }
-/* line 105, ../sass/layouts/_list.scss */
+/* line 98, ../sass/layouts/_list.scss */
 .submit .photos .req {
   top: 5px;
   bottom: auto;
 }
-/* line 111, ../sass/layouts/_list.scss */
+/* line 104, ../sass/layouts/_list.scss */
 .submit .phone input[type=tel] {
   width: 32%;
   max-width: 80px;
   margin-right: 1%;
 }
-/* line 115, ../sass/layouts/_list.scss */
+/* line 108, ../sass/layouts/_list.scss */
 .submit .phone input[type=tel]:last-child {
   margin-right: 0;
   max-width: 100px;
 }
-/* line 122, ../sass/layouts/_list.scss */
+/* line 115, ../sass/layouts/_list.scss */
 .submit .price input[type=text] {
   width: 95%;
   float: right;
 }
-/* line 126, ../sass/layouts/_list.scss */
+/* line 119, ../sass/layouts/_list.scss */
 .submit .price em {
   float: left;
   width: 5%;
   display: block;
 }
-/* line 132, ../sass/layouts/_list.scss */
+/* line 125, ../sass/layouts/_list.scss */
 .submit .more-photos p {
   clear: both;
 }
-/* line 135, ../sass/layouts/_list.scss */
+/* line 128, ../sass/layouts/_list.scss */
 .submit .more-photos a {
   color: #0b1622;
   margin-bottom: 15px;
   clear: both;
   display: block;
 }
-/* line 141, ../sass/layouts/_list.scss */
+/* line 134, ../sass/layouts/_list.scss */
 .submit .terms {
   color: #0b1622;
   font-style: italic;
@@ -2961,26 +3082,26 @@ html[xmlns] .slides {
   display: block;
   float: left;
 }
-/* line 147, ../sass/layouts/_list.scss */
+/* line 140, ../sass/layouts/_list.scss */
 .submit .terms a {
   color: #0b1622;
   text-decoration: undeline;
 }
-/* line 152, ../sass/layouts/_list.scss */
+/* line 145, ../sass/layouts/_list.scss */
 .submit form .additional-info {
   margin: 30px 0;
   width: 80%;
   clear: both;
   float: left;
 }
-/* line 157, ../sass/layouts/_list.scss */
+/* line 150, ../sass/layouts/_list.scss */
 .submit form .additional-info p, .submit form .additional-info ul, .submit form .additional-info li {
   color: rgba(255, 255, 255, 0.8);
   background: transparent;
   margin-left: 0;
   padding: 0;
 }
-/* line 163, ../sass/layouts/_list.scss */
+/* line 156, ../sass/layouts/_list.scss */
 .submit form .additional-info ul li {
   list-style-type: disc;
   padding: 5px 20px;
@@ -2988,7 +3109,7 @@ html[xmlns] .slides {
   font-weight: 600;
   margin: 10px 0;
 }
-/* line 170, ../sass/layouts/_list.scss */
+/* line 163, ../sass/layouts/_list.scss */
 .submit form .additional-info ul {
   margin: 0;
 }

@@ -39,5 +39,13 @@
     </script>
   </head>
     <body{% if url == "/" %} class="landing"{% endif %}>
-    {% unless url == "/" %}{% include 'includes/navigation' %}{% endunless %}
+    {% unless url == "/" %}
+      {% include 'includes/navigation' %}
+      <div class="sidebar-spacing">
+      </div>
+      <div class="page-header">
+        <h1>{{title}}</h1>
+      </div>
+    {% endunless %}
+
     <div class="page-content">

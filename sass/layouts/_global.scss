@@ -1,5 +1,5 @@
 body {
-  background: transparentize($color-light-blue, 0.75);
+  background: transparentize($color-light-blue, 0.9);
   color: $color-dark-blue;
   text-rendering: optimizeLegibility;
   position: relative;
@@ -18,9 +18,10 @@ li {
   list-style-type: disc;
 }
 h1 {
-  font-family: $type-display;
+  font-family: $type-sans;
   font-size: 42px;
   margin-bottom: 20px;
+  font-weight: 900;
   @include respond-to(wide-screens) {
     font-size: 64px
   }
@@ -43,19 +44,19 @@ h3 {
 }
 
 h4 {
-  font-family: $type-display;
+  font-family: $type-sans;
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 900;
   margin-bottom: 10px;
 }
 
 a {
   color: $color-dark-blue;
-  font-weight: 500;
+  font-weight: 600;
   text-decoration: none;
   @include transition(all 0.2s ease-in-out);
   &:hover {
-      text-decoration: none;
+      text-decoration: underline;
   }
 }
 
@@ -66,6 +67,6 @@ strong {
   display: none;
 }
 .container {
-  max-width: 800px;
-  margin: 0 auto;
+  // max-width: 800px;
+  // margin: 0 auto;
 }

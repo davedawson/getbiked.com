@@ -1,9 +1,4 @@
 .submit {
-  background: $color-dark-blue;
-  padding: 150px 0;
-  h1, h2, h3, h4 {
-    color: $color-white;
-  }
   h2 {
     font-weight: 100;
     font-style: normal;
@@ -31,7 +26,7 @@
     display: block;
     float: none;
     color: $color-dark-blue;
-    font-size: 3em;
+    font-size: 2.5em;
     line-height: 1em;
     span {
       display: block;
@@ -44,18 +39,15 @@
     margin: 0;
   }
   .lead-in {
-    color: transparentize($color-white, 0.2);
+    color: lighten($color-black, 40%);
     margin-top: 40px;
     float: left;
   }
 
   form {
-    width: 90%;
-    max-width: 1200px;
     margin: 0 auto;
     @include clearfix;
     @include respond-to(wide-screens) {
-      width: 70%;
     }
   }
   form ul {
@@ -63,7 +55,8 @@
     margin-top: 20px;
     clear: both;
     float: left;
-    background: $color-light-blue;
+    background: transparentize($color-white, 0.1);
+    border: 1px solid transparentize($color-black, 0.9);
     @include clearfix;
     @include respond-to(wide-screens) {
     }

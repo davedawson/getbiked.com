@@ -9,10 +9,14 @@
     background-position: top right;
     // background-image: url(/img/gb-bg-tall.jpg);
     height: 100%;
+    z-index: 2;
     @include box-sizing(border-box);
   }
   @include respond-to(medium-screens) {
 
+  }
+  a:hover {
+    text-decoration: none;
   }
   h1 {
     color: $color-white;
@@ -24,8 +28,10 @@
     padding: 50px 15%;
     font-size: 24px;
     position: relative;
+    font-weight: 200;
     @include clearfix;
     @include transition(all 0.2s ease-in-out);
+
     span {
       display: block;
     }
