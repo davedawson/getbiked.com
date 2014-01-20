@@ -306,13 +306,13 @@ hr {
       width: 50%;
       padding: 100px 4%;
       font-size: 36px;
-      min-height: 400px;
+      min-height: 410px;
     }
     @include respond-to(wide-screens) {
       width: 50%;
       // padding: 150px 10%;
       font-size: 48px;
-      min-height: 520px;
+      min-height: 530px;
     }
     &:nth-child(2n) {
       // float: right;
@@ -322,7 +322,21 @@ hr {
     }
     &:hover span {
       font-size: 76px;
+      -webkit-transform:rotate(-25deg);
+      -moz-transform:rotate(-25deg);
+      -o-transform:rotate(-25deg);
       @include transition(all 0.2s ease-in-out);
+    }
+    span {
+      -webkit-transition-duration: 0.2s;
+      -moz-transition-duration: 0.2s;
+      -o-transition-duration: 0.2s;
+      transition-duration: 0.2s;
+
+      -webkit-transition-property: -webkit-transform;
+      -moz-transition-property: -moz-transform;
+      -o-transition-property: -o-transform;
+      transition-property: transform;
     }
     &.bikes {
       background-color: #aa83bb;
@@ -334,6 +348,26 @@ hr {
       background-color: #8395bb;
       &:hover {
         background-color: darken(#8395bb, 10%);
+      }
+    }
+    &.education-form {
+      background-color: darken(#c1e5e5, 10%);
+      color: $color-blue;
+      &:hover {
+        background-color: darken(#c1e5e5, 20%);
+      }
+      em {
+        font-size: 20px;
+        line-height: 24px;
+        margin-top: 20px;
+      }
+      @include respond-to(medium-screens) {
+        width: 100%;
+        min-height: 200px;
+      }
+      @include respond-to(wide-screens) {
+        width: 100%;
+        min-height: 400px;
       }
     }
     .wrap {
