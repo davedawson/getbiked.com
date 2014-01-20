@@ -1,40 +1,40 @@
 <div class="header">
-  <a href="/"><h1><img src="/img/get-biked-logo.svg" alt="Get Biked" />
-    <p>An email list of bikes for sale in New York City.</p>
-  </h1>
+  <a href="/">
+    <h1><img src="/img/get-biked-logo.svg" alt="Get Biked" />
+      <p>An email list of bikes for sale in New York City.</p>
+    </h1>
   </a>
-  <div class="description">
+  <p class="menu"><a href="#">Menu <span class="ss-icon ss-navigatedown"></span><span class="ss-icon ss-close">close</span></a></p>
+  <div class="nav-wrap">
+    <div class="description">
 
 
-    <ul class="nav">
-      <li><a href="/bikes" class="button look">Look at bikes</a></li>
-      <li><a href="/list" class="button sell">List a bike</a></li>
-    </ul>
-
-
-    <section class="signup">
-      <p>Each week, an organized list of beautiful bikes is delivered to your inbox. Just sit back and wait for your potential new bike to appear.</p>
-      <div class="container">
-        <!-- Begin MailChimp Signup Form -->
-        <div id="mc_embed_signup">
-        <form action="http://iamdavedawson.us6.list-manage.com/subscribe/post?u=d7b57d8da83c0125ac45d82c4&amp;id=f56ce221d3" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-        <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email Address">
-        </div>
-          <div id="mce-responses" class="clear">
-            <div class="response" id="mce-error-response" style="display:none"></div>
-            <div class="response" id="mce-success-response" style="display:none"></div>
-          </div>
-          <input type="submit" value="Join the List" name="subscribe" id="mc-embedded-subscribe" class="button">
-        </form>
-        </div>
-
-        <!--End mc_embed_signup-->
-      </div>
-    </section>
-    <div class="footer">
-      <ul clas="nav">
-        <li><a href="/faqs">FAQs</a></li>
+      <ul class="nav">
+        <li><a href="/bikes" class="button look">Look at bikes</a></li>
+        <li><a href="/list" class="button list">List a bike</a></li>
       </ul>
+
+
+      <section class="signup">
+        <p>Each week, an organized list of beautiful bikes is delivered to your inbox. <span>Just sit back and wait for your potential new bike to appear.</span></p>
+        <div class="container">
+          <!-- Begin MailChimp Signup Form -->
+          <div id="mc_embed_signup">
+          <form action="http://iamdavedawson.us6.list-manage.com/subscribe/post?u=d7b57d8da83c0125ac45d82c4&amp;id=f56ce221d3" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+          <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email Address">
+          </div>
+            <div id="mce-responses" class="clear">
+              <div class="response" id="mce-error-response" style="display:none"></div>
+              <div class="response" id="mce-success-response" style="display:none"></div>
+            </div>
+            <input type="submit" value="Sign Up" name="subscribe" id="mc-embedded-subscribe" class="button">
+          </form>
+          </div>
+
+          <!--End mc_embed_signup-->
+        </div>
+      </section>
+      {% include 'includes/secondary-nav' %}
     </div>
   </div>
 </div>

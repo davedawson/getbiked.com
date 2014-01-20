@@ -1,6 +1,7 @@
 {% include 'includes/header' %}
 
 <div class="container bike-list">
+  <h1>{{title}}</h1>
   {% for post in posts limit:20 %}
     <article class="entry" id="{{post.title | downcase | remove: ' '}}">
       <div class="photos">
@@ -22,25 +23,19 @@
 
       <div class="bike-description">
         <h2><a href="{{post.url}}">{{post.title}}</a></h2>
-        <ul>
-          <li>
-            <dt>Make &amp; model:</dt>
-            <dd>{{post.meta['Make & Model'] | markdown:true}}</dd>
-          </li>
-          <li>
-            <dt>Asking price:</dt>
-            <dd>{{post.meta['Price'] | markdown:true}}</dd>
-          </li>
-          <li>
-            <dt>Gears:</dt>
-            <dd>{{post.meta['Gears'] | markdown:true}}</dd>
-          </li>
-          <li>
-            <dt>Neighborhood:</dt>
-            <dd>{{post.meta['Neighborhood'] | markdown:true}}</dd>
-          </li>
-        </ul>
-        <p><a href="{{post.url}}" class="button">Full Bike Details</a></p>
+        <div class="col1">
+          <dt>Make &amp; model:</dt>
+          <dd>{{post.meta['Make & Model'] | markdown:true}}</dd>
+          <dt>Asking price:</dt>
+          <dd>{{post.meta['Price'] | markdown:true}}</dd>
+        </div>
+        <div class="col2">
+          <dt>Gears:</dt>
+          <dd>{{post.meta['Gears'] | markdown:true}}</dd>
+          <dt>Neighborhood:</dt>
+          <dd>{{post.meta['Neighborhood'] | markdown:true}}</dd>
+        </div>
+        <p><a href="{{post.url}}" class="button">Full Bike Details <span class="ss-icon">navigateright</span></a></p>
       </div>
 
     </article>

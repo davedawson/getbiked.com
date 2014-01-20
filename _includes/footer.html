@@ -1,5 +1,9 @@
-
     </div><!-- /.page-content -->
+    {% if url == "/" %}
+      <section class="footer">
+        {% include 'includes/secondary-nav' %}
+      </section>
+    {% endif %}
     <script src="/js/source.js"></script>
     <script src="/js/wufoo.js"></script>
     <script src="/js/jquery.alphanum.js"></script>

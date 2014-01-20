@@ -69,7 +69,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 @font-face {
-  font-family: "SSStandard";
+  font-family: "SSGizmo";
   src: url("/webfonts/ss-gizmo.eot");
   src: url("/webfonts/ss-gizmo.eot?#iefix") format("embedded-opentype"), url("/webfonts/ss-gizmo.woff") format("woff"), url("/webfonts/ss-gizmo.ttf") format("truetype"), url("/webfonts/ss-gizmo.svg#SSStandard") format("svg");
   font-weight: normal;
@@ -1665,7 +1665,7 @@ html:hover .ss-icon {
 }
 
 /* line 19, ../sass/modules/_mixins.scss */
-.cf, .intro, .landing .signup, .details, .bike-list article {
+.cf, .intro, .landing .signup, .details, .links, .bike-list article {
   content: "";
   display: table;
   clear: both;
@@ -2189,10 +2189,119 @@ html[xmlns] .slides {
     right: 10px;
   }
 }
+/* line 1, ../sass/layouts/_global.scss */
+body {
+  background: rgba(230, 253, 253, 0.1);
+  color: #0b1622;
+  text-rendering: optimizeLegibility;
+  position: relative;
+  height: 100%;
+}
+
+/* line 9, ../sass/layouts/_global.scss */
+p, ol, ul, li, dl, dt, dd {
+  font-family: "ronnia", "freight-sans-pro";
+  font-size: 1.2rem;
+  line-height: 1.45rem;
+  font-weight: 300;
+}
+
+/* line 15, ../sass/layouts/_global.scss */
+p {
+  margin-bottom: 20px;
+}
+
+/* line 18, ../sass/layouts/_global.scss */
+li {
+  list-style-type: disc;
+}
+
+/* line 21, ../sass/layouts/_global.scss */
+h1 {
+  font-family: "ronnia", "freight-sans-pro";
+  font-size: 42px;
+  margin-bottom: 20px;
+  font-weight: 900;
+}
+@media only screen and (min-width: 972px) {
+  /* line 21, ../sass/layouts/_global.scss */
+  h1 {
+    font-size: 64px;
+  }
+}
+@media only screen and (min-width: 641px) and (max-width: 971px) {
+  /* line 21, ../sass/layouts/_global.scss */
+  h1 {
+    font-size: 56px;
+  }
+}
+
+/* line 33, ../sass/layouts/_global.scss */
+h2 {
+  font-family: "ronnia", "freight-sans-pro";
+  font-size: 32px;
+  font-weight: bold;
+}
+
+/* line 38, ../sass/layouts/_global.scss */
+h3 {
+  font-family: "ronnia", "freight-sans-pro";
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 30px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* line 47, ../sass/layouts/_global.scss */
+h4 {
+  font-family: "ronnia", "freight-sans-pro";
+  font-size: 18px;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+/* line 54, ../sass/layouts/_global.scss */
+a {
+  color: #0b1622;
+  font-weight: 600;
+  text-decoration: none;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+/* line 59, ../sass/layouts/_global.scss */
+a:hover {
+  text-decoration: underline;
+}
+
+/* line 64, ../sass/layouts/_global.scss */
+strong {
+  font-weight: 600;
+}
+
+/* line 67, ../sass/layouts/_global.scss */
+.hide {
+  display: none;
+}
+
 /* line 1, ../sass/layouts/_header.scss */
 .header {
   width: 100%;
   background: #1e2124;
+  min-height: 0;
+}
+/* line 33, ../sass/modules/_mixins.scss */
+.header:before, .header:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+/* line 34, ../sass/modules/_mixins.scss */
+.header:after {
+  clear: both;
 }
 @media only screen and (min-width: 972px) {
   /* line 1, ../sass/layouts/_header.scss */
@@ -2204,16 +2313,18 @@ html[xmlns] .slides {
     background-position: top right;
     height: 100%;
     z-index: 2;
+    overflow: hidden;
+    overflow-y: scroll;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
   }
 }
-/* line 18, ../sass/layouts/_header.scss */
+/* line 21, ../sass/layouts/_header.scss */
 .header a:hover {
   text-decoration: none;
 }
-/* line 21, ../sass/layouts/_header.scss */
+/* line 24, ../sass/layouts/_header.scss */
 .header h1 {
   color: white;
   width: 100%;
@@ -2242,28 +2353,28 @@ html[xmlns] .slides {
 .header h1:after {
   clear: both;
 }
-/* line 35, ../sass/layouts/_header.scss */
+/* line 38, ../sass/layouts/_header.scss */
 .header h1 span {
   display: block;
 }
-/* line 38, ../sass/layouts/_header.scss */
+/* line 41, ../sass/layouts/_header.scss */
 .header h1 img {
   width: 100%;
   margin: 0 auto;
 }
 @media only screen and (min-width: 641px) and (max-width: 971px) {
-  /* line 38, ../sass/layouts/_header.scss */
+  /* line 41, ../sass/layouts/_header.scss */
   .header h1 img {
     float: left;
     width: 50%;
   }
 }
-/* line 46, ../sass/layouts/_header.scss */
+/* line 49, ../sass/layouts/_header.scss */
 .header h1 p {
   margin-left: 4%;
 }
 @media only screen and (min-width: 641px) and (max-width: 971px) {
-  /* line 53, ../sass/layouts/_header.scss */
+  /* line 56, ../sass/layouts/_header.scss */
   .header h1 p {
     margin-bottom: 0px;
     position: absolute;
@@ -2274,36 +2385,69 @@ html[xmlns] .slides {
     font-size: 24px;
   }
 }
-/* line 64, ../sass/layouts/_header.scss */
+/* line 67, ../sass/layouts/_header.scss */
+.header .nav {
+  min-height: 0;
+}
+/* line 33, ../sass/modules/_mixins.scss */
+.header .nav:before, .header .nav:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+/* line 34, ../sass/modules/_mixins.scss */
+.header .nav:after {
+  clear: both;
+}
+/* line 70, ../sass/layouts/_header.scss */
 .header .description {
   padding: 25px 10%;
 }
-/* line 66, ../sass/layouts/_header.scss */
+/* line 72, ../sass/layouts/_header.scss */
 .header .description p {
   color: white;
 }
-/* line 69, ../sass/layouts/_header.scss */
+/* line 75, ../sass/layouts/_header.scss */
 .header .description ul, .header .description li {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
-/* line 74, ../sass/layouts/_header.scss */
+/* line 80, ../sass/layouts/_header.scss */
 .header .description .button {
   margin-bottom: 1em;
+  width: 100%;
+  background: #1f3246;
 }
 @media only screen and (min-width: 972px) {
-  /* line 74, ../sass/layouts/_header.scss */
+  /* line 80, ../sass/layouts/_header.scss */
   .header .description .button {
-    width: 100%;
     float: left;
   }
-  /* line 79, ../sass/layouts/_header.scss */
-  .header .description .button.sell {
+}
+@media only screen and (min-width: 641px) and (max-width: 971px) {
+  /* line 80, ../sass/layouts/_header.scss */
+  .header .description .button {
+    margin-bottom: 0;
+  }
+}
+@media only screen and (min-width: 641px) and (max-width: 971px) {
+  /* line 92, ../sass/layouts/_header.scss */
+  .header .description .nav .button {
+    width: 48%;
+    float: left;
+  }
+  /* line 96, ../sass/layouts/_header.scss */
+  .header .description .nav .button.list {
     float: right;
   }
 }
-/* line 86, ../sass/layouts/_header.scss */
+/* line 103, ../sass/layouts/_header.scss */
+.header .signup {
+  margin-top: 10px;
+}
+/* line 105, ../sass/layouts/_header.scss */
 .header .signup p {
   font-size: 14px;
   line-height: 18px;
@@ -2312,101 +2456,248 @@ html[xmlns] .slides {
   clear: both;
   margin: 25px 0 5px;
 }
-
-/* line 1, ../sass/layouts/_global.scss */
-body {
-  background: rgba(230, 253, 253, 0.1);
-  color: #0b1622;
-  text-rendering: optimizeLegibility;
-  position: relative;
-  height: 100%;
-}
-
-/* line 9, ../sass/layouts/_global.scss */
-p, ol, ul, li, dl, dt, dd {
-  font-family: "ronnia", "freight-sans-pro";
-  font-size: 1.2rem;
-  line-height: 1.45rem;
-}
-
-/* line 14, ../sass/layouts/_global.scss */
-p {
-  margin-bottom: 20px;
-}
-
-/* line 17, ../sass/layouts/_global.scss */
-li {
-  list-style-type: disc;
-}
-
-/* line 20, ../sass/layouts/_global.scss */
-h1 {
-  font-family: "ronnia", "freight-sans-pro";
-  font-size: 42px;
-  margin-bottom: 20px;
-  font-weight: 900;
+@media only screen and (min-width: 972px) {
+  /* line 105, ../sass/layouts/_header.scss */
+  .header .signup p {
+    font-size: 12px;
+    line-height: 16px;
+  }
 }
 @media only screen and (min-width: 972px) {
-  /* line 20, ../sass/layouts/_global.scss */
-  h1 {
-    font-size: 64px;
+  /* line 117, ../sass/layouts/_header.scss */
+  .header .signup span {
+    display: none;
   }
 }
-@media only screen and (min-width: 641px) and (max-width: 971px) {
-  /* line 20, ../sass/layouts/_global.scss */
-  h1 {
-    font-size: 56px;
+/* line 122, ../sass/layouts/_header.scss */
+.header .signup input[type=email] {
+  width: 60%;
+  float: left;
+}
+@media only screen and (min-width: 972px) {
+  /* line 122, ../sass/layouts/_header.scss */
+  .header .signup input[type=email] {
+    font-size: 12px;
+    padding: 12px 4% 9px;
   }
 }
-
-/* line 32, ../sass/layouts/_global.scss */
-h2 {
-  font-family: "ronnia", "freight-sans-pro";
-  font-size: 32px;
-  font-weight: bold;
+/* line 130, ../sass/layouts/_header.scss */
+.header .signup input[type=submit] {
+  width: 40%;
+  float: right;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
 }
-
-/* line 37, ../sass/layouts/_global.scss */
-h3 {
-  font-family: "ronnia", "freight-sans-pro";
-  font-size: 26px;
-  font-weight: 600;
-  line-height: 30px;
-  margin-top: 20px;
-  margin-bottom: 10px;
-}
-
-/* line 46, ../sass/layouts/_global.scss */
-h4 {
-  font-family: "ronnia", "freight-sans-pro";
-  font-size: 18px;
-  font-weight: 900;
-  margin-bottom: 10px;
-}
-
-/* line 53, ../sass/layouts/_global.scss */
-a {
-  color: #0b1622;
-  font-weight: 600;
-  text-decoration: none;
+/* line 137, ../sass/layouts/_header.scss */
+.header .menu {
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
-/* line 58, ../sass/layouts/_global.scss */
-a:hover {
-  text-decoration: underline;
+/* line 141, ../sass/layouts/_header.scss */
+.header .menu a {
+  padding: 20px 5% 20px 14%;
+  color: white;
+  display: block;
 }
-
-/* line 63, ../sass/layouts/_global.scss */
-strong {
-  font-weight: 600;
+@media only screen and (min-width: 641px) and (max-width: 971px) {
+  /* line 141, ../sass/layouts/_header.scss */
+  .header .menu a {
+    padding: 20px 5% 20px 10%;
+  }
 }
-
-/* line 66, ../sass/layouts/_global.scss */
-.hide {
+/* line 149, ../sass/layouts/_header.scss */
+.header .menu .ss-close {
+  opacity: 0;
   display: none;
+}
+/* line 153, ../sass/layouts/_header.scss */
+.header .menu .ss-navigatedown {
+  opacity: 1;
+}
+@media only screen and (min-width: 972px) {
+  /* line 137, ../sass/layouts/_header.scss */
+  .header .menu {
+    display: none;
+  }
+}
+/* line 159, ../sass/layouts/_header.scss */
+.header .menu .ss-icon {
+  position: relative;
+  top: 3px;
+  font-size: 30px;
+  margin-right: 10px;
+  float: right;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+/* line 168, ../sass/layouts/_header.scss */
+.header .menu.open .ss-close {
+  opacity: 1;
+  display: inline-block;
+}
+/* line 172, ../sass/layouts/_header.scss */
+.header .menu.open .ss-navigatedown {
+  opacity: 0;
+  display: none;
+}
+
+/* line 1, ../sass/layouts/_footer.scss */
+.secondary-links {
+  padding: 0 10% 20px;
+  clear: both;
+  width: 100%;
+  margin: 20px 0;
+  text-align: left;
+  float: left;
+  min-height: 0;
+}
+/* line 33, ../sass/modules/_mixins.scss */
+.secondary-links:before, .secondary-links:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+/* line 34, ../sass/modules/_mixins.scss */
+.secondary-links:after {
+  clear: both;
+}
+@media only screen and (min-width: 641px) and (max-width: 971px) {
+  /* line 1, ../sass/layouts/_footer.scss */
+  .secondary-links {
+    padding: 0 10%;
+    text-align: center;
+  }
+}
+/* line 13, ../sass/layouts/_footer.scss */
+.secondary-links li, .secondary-links span {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 300;
+}
+/* line 18, ../sass/layouts/_footer.scss */
+.secondary-links li {
+  margin: 0 1%;
+  color: rgba(255, 255, 255, 0.6);
+}
+/* line 22, ../sass/layouts/_footer.scss */
+.secondary-links li a {
+  color: rgba(255, 255, 255, 0.6);
+}
+/* line 25, ../sass/layouts/_footer.scss */
+.secondary-links span {
+  color: rgba(255, 255, 255, 0.1);
+}
+/* line 28, ../sass/layouts/_footer.scss */
+.secondary-links span {
+  color: rgba(255, 255, 255, 0.2);
+  display: none;
+}
+@media only screen and (min-width: 641px) and (max-width: 971px) {
+  /* line 28, ../sass/layouts/_footer.scss */
+  .secondary-links span {
+    display: inline-block;
+    margin: 0 3%;
+  }
+}
+/* line 36, ../sass/layouts/_footer.scss */
+.secondary-links li {
+  list-style-type: none;
+  margin: 0;
+  display: block;
+  text-align: left;
+}
+@media only screen and (min-width: 641px) and (max-width: 971px) {
+  /* line 36, ../sass/layouts/_footer.scss */
+  .secondary-links li {
+    display: inline-block;
+    margin: 0 3%;
+  }
+}
+/* line 45, ../sass/layouts/_footer.scss */
+.secondary-links li:first-child {
+  margin-left: 0;
+}
+/* line 48, ../sass/layouts/_footer.scss */
+.secondary-links li.legal {
+  width: 100%;
+}
+/* line 52, ../sass/layouts/_footer.scss */
+.secondary-links a {
+  color: white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  width: 100%;
+  display: block;
+  clear: both;
+  padding: 10px 15px;
+}
+/* line 54, ../sass/layouts/_footer.scss */
+.secondary-links a:hover {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+}
+/* line 58, ../sass/layouts/_footer.scss */
+.secondary-links a:first-child {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+@media only screen and (min-width: 641px) and (max-width: 971px) {
+  /* line 58, ../sass/layouts/_footer.scss */
+  .secondary-links a:first-child {
+    border: 0;
+  }
+}
+@media only screen and (min-width: 641px) and (max-width: 971px) {
+  /* line 52, ../sass/layouts/_footer.scss */
+  .secondary-links a {
+    display: inline;
+    font-size: 16px;
+    font-weight: 600;
+    border: 0;
+  }
+}
+/* line 76, ../sass/layouts/_footer.scss */
+.secondary-links .legal {
+  margin: 20px 0;
+}
+/* line 78, ../sass/layouts/_footer.scss */
+.secondary-links .legal li {
+  padding: 0;
+  margin: 0;
+  font-size: 12px;
+}
+@media only screen and (min-width: 972px) {
+  /* line 78, ../sass/layouts/_footer.scss */
+  .secondary-links .legal li {
+    display: block;
+  }
+}
+/* line 86, ../sass/layouts/_footer.scss */
+.secondary-links .legal a {
+  padding: 0;
+  display: inline;
+  font-weight: 300;
+  font-size: 12px;
+  border: 0;
+}
+/* line 94, ../sass/layouts/_footer.scss */
+.secondary-links .legal span {
+  display: none;
+}
+@media only screen and (min-width: 641px) and (max-width: 971px) {
+  /* line 94, ../sass/layouts/_footer.scss */
+  .secondary-links .legal span {
+    display: inline;
+  }
 }
 
 /* line 2, ../sass/layouts/_landing.scss */
@@ -2414,31 +2705,79 @@ strong {
   width: 100%;
   margin: 0;
   padding: 0;
+  max-width: none;
 }
-
 /* line 8, ../sass/layouts/_landing.scss */
-.intro {
-  padding: 0;
-  width: 100%;
-  height: 300px;
-  background: #e6fdfd;
+.landing .footer {
+  padding: 25px 2%;
+  background-color: #1f3246;
+  color: white;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  min-height: 0;
+}
+/* line 33, ../sass/modules/_mixins.scss */
+.landing .footer:before, .landing .footer:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+/* line 34, ../sass/modules/_mixins.scss */
+.landing .footer:after {
+  clear: both;
 }
 @media only screen and (min-width: 972px) {
   /* line 8, ../sass/layouts/_landing.scss */
+  .landing .footer {
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 972px) {
+  /* line 18, ../sass/layouts/_landing.scss */
+  .landing .footer li, .landing .footer span {
+    display: inline-block;
+    border: 0;
+  }
+}
+@media only screen and (min-width: 972px) {
+  /* line 25, ../sass/layouts/_landing.scss */
+  .landing .footer a:first-child {
+    border: 0;
+  }
+}
+@media only screen and (min-width: 972px) {
+  /* line 30, ../sass/layouts/_landing.scss */
+  .landing .footer .secondary-links {
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 972px) {
+  /* line 35, ../sass/layouts/_landing.scss */
+  .landing .footer .legal {
+    margin-top: 0;
+  }
+}
+
+/* line 42, ../sass/layouts/_landing.scss */
+.intro {
+  padding: 0;
+  width: 100%;
+  background: #e6fdfd;
+}
+@media only screen and (min-width: 972px) {
+  /* line 42, ../sass/layouts/_landing.scss */
   .intro {
     height: 800px;
   }
 }
-@media only screen and (min-width: 641px) and (max-width: 971px) {
-  /* line 8, ../sass/layouts/_landing.scss */
-  .intro {
-    height: 600px;
-  }
-}
-/* line 20, ../sass/layouts/_landing.scss */
+/* line 54, ../sass/layouts/_landing.scss */
 .intro h1 {
-  color: #0b1622;
+  color: #1f3246;
+  font-family: "lust-display-didone";
   font-size: 85px;
+  font-weight: 100;
   line-height: 70px;
   text-align: left;
   margin-top: 40px;
@@ -2448,12 +2787,12 @@ strong {
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
-/* line 28, ../sass/layouts/_landing.scss */
+/* line 64, ../sass/layouts/_landing.scss */
 .intro h1 span {
   display: block;
 }
 @media only screen and (min-width: 972px) {
-  /* line 20, ../sass/layouts/_landing.scss */
+  /* line 54, ../sass/layouts/_landing.scss */
   .intro h1 {
     font-size: 156px;
     line-height: 128px;
@@ -2461,26 +2800,26 @@ strong {
   }
 }
 @media only screen and (min-width: 641px) and (max-width: 971px) {
-  /* line 20, ../sass/layouts/_landing.scss */
+  /* line 54, ../sass/layouts/_landing.scss */
   .intro h1 {
     font-size: 130px;
     line-height: 108px;
   }
 }
-/* line 41, ../sass/layouts/_landing.scss */
+/* line 77, ../sass/layouts/_landing.scss */
 .intro p {
   font-size: 24px;
   line-height: 28px;
   text-align: left;
   margin-bottom: 10px;
-  color: black;
+  color: #0b1622;
   max-width: 640px;
   -webkit-transition: all 0.1s ease-in-out;
   -moz-transition: all 0.1s ease-in-out;
   -o-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
 }
-/* line 50, ../sass/layouts/_landing.scss */
+/* line 86, ../sass/layouts/_landing.scss */
 .intro .hero {
   width: 100%;
   height: 200px;
@@ -2489,7 +2828,7 @@ strong {
   background-position: center;
 }
 @media only screen and (min-width: 972px) {
-  /* line 50, ../sass/layouts/_landing.scss */
+  /* line 86, ../sass/layouts/_landing.scss */
   .intro .hero {
     width: 35%;
     float: left;
@@ -2497,15 +2836,8 @@ strong {
     height: 840px;
   }
 }
-@media only screen and (min-width: 641px) and (max-width: 971px) {
-  /* line 50, ../sass/layouts/_landing.scss */
-  .intro .hero {
-    height: 800px;
-  }
-}
-/* line 66, ../sass/layouts/_landing.scss */
+/* line 102, ../sass/layouts/_landing.scss */
 .intro .description {
-  height: 580px;
   float: right;
   padding: 0 5%;
   width: 100%;
@@ -2515,53 +2847,57 @@ strong {
   box-sizing: border-box;
 }
 @media only screen and (min-width: 972px) {
-  /* line 66, ../sass/layouts/_landing.scss */
+  /* line 102, ../sass/layouts/_landing.scss */
   .intro .description {
     height: 840px;
     width: 65%;
   }
 }
-@media only screen and (min-width: 641px) and (max-width: 971px) {
-  /* line 66, ../sass/layouts/_landing.scss */
-  .intro .description {
-    height: 800px;
-  }
-}
-/* line 85, ../sass/layouts/_landing.scss */
+/* line 121, ../sass/layouts/_landing.scss */
 .intro input[type=email] {
-  width: 65%;
+  width: 100%;
   font-size: 0.9rem;
   padding: 1.1em 2%;
   background: white;
-  float: left;
+  float: none;
   border: 0;
 }
 @media only screen and (min-width: 972px) {
-  /* line 85, ../sass/layouts/_landing.scss */
+  /* line 121, ../sass/layouts/_landing.scss */
   .intro input[type=email] {
     font-size: 1.6rem;
+    width: 65%;
+    float: left;
   }
-  /* line 95, ../sass/layouts/_landing.scss */
+  /* line 133, ../sass/layouts/_landing.scss */
   .intro input[type=email]:hover {
     background: white;
   }
 }
 @media only screen and (min-width: 641px) and (max-width: 971px) {
-  /* line 85, ../sass/layouts/_landing.scss */
+  /* line 121, ../sass/layouts/_landing.scss */
   .intro input[type=email] {
     font-size: 1.35rem;
     background: rgba(255, 255, 255, 0.9);
+    width: 65%;
+    float: left;
   }
 }
-/* line 104, ../sass/layouts/_landing.scss */
+/* line 144, ../sass/layouts/_landing.scss */
 .intro input[type=submit] {
-  width: 35%;
-  float: right;
+  width: 100%;
+  float: none;
   border: 0;
   text-transform: uppercase;
   letter-spacing: 0.2em;
   font-size: 0.9rem;
   -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  background: #1f3246;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
@@ -2571,34 +2907,37 @@ strong {
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-/* line 113, ../sass/layouts/_landing.scss */
+/* line 155, ../sass/layouts/_landing.scss */
 .intro input[type=submit]:hover {
-  background: black;
+  background: #0b1622;
   cursor: pointer;
 }
 @media only screen and (min-width: 972px) {
-  /* line 104, ../sass/layouts/_landing.scss */
+  /* line 144, ../sass/layouts/_landing.scss */
   .intro input[type=submit] {
     font-size: 1.4rem;
-    padding: 1.85rem 5%;
+    padding: 1.85rem 2%;
+    width: 35%;
+    float: right;
   }
 }
 @media only screen and (min-width: 641px) and (max-width: 971px) {
-  /* line 104, ../sass/layouts/_landing.scss */
+  /* line 144, ../sass/layouts/_landing.scss */
   .intro input[type=submit] {
     font-size: 1rem;
     padding: 1.75rem 5%;
+    width: 35%;
   }
 }
 
-/* line 129, ../sass/layouts/_landing.scss */
+/* line 174, ../sass/layouts/_landing.scss */
 .landing .signup {
   width: 100%;
   margin: 20px auto;
   padding: 0;
 }
 @media only screen and (min-width: 972px) {
-  /* line 129, ../sass/layouts/_landing.scss */
+  /* line 174, ../sass/layouts/_landing.scss */
   .landing .signup {
     width: 130%;
     position: relative;
@@ -2610,7 +2949,7 @@ strong {
   }
 }
 
-/* line 146, ../sass/layouts/_landing.scss */
+/* line 191, ../sass/layouts/_landing.scss */
 .details {
   clear: both;
   background: url(/img/details-bg.jpg);
@@ -2619,7 +2958,7 @@ strong {
   padding: 50px 5%;
   width: 100%;
 }
-/* line 155, ../sass/layouts/_landing.scss */
+/* line 200, ../sass/layouts/_landing.scss */
 .details h2 {
   text-align: center;
   margin-bottom: 40px;
@@ -2630,7 +2969,7 @@ strong {
   transition: all 0.2s ease-in-out;
 }
 @media only screen and (min-width: 972px) {
-  /* line 155, ../sass/layouts/_landing.scss */
+  /* line 200, ../sass/layouts/_landing.scss */
   .details h2 {
     text-align: left;
     float: left;
@@ -2641,7 +2980,7 @@ strong {
     line-height: 64px;
   }
 }
-/* line 170, ../sass/layouts/_landing.scss */
+/* line 215, ../sass/layouts/_landing.scss */
 .details p, .details h3 {
   font-size: 18px;
   line-height: 24px;
@@ -2649,14 +2988,14 @@ strong {
   z-index: 2;
   color: #0b1622;
 }
-/* line 177, ../sass/layouts/_landing.scss */
+/* line 222, ../sass/layouts/_landing.scss */
 .details h3 {
   position: relative;
   z-index: 2;
   font-size: 30px;
   margin-bottom: 10px;
 }
-/* line 183, ../sass/layouts/_landing.scss */
+/* line 228, ../sass/layouts/_landing.scss */
 .details .content {
   padding: 40px 30px;
   background: rgba(255, 255, 255, 0.7);
@@ -2664,19 +3003,19 @@ strong {
   @extent .cf;
 }
 @media only screen and (min-width: 972px) {
-  /* line 183, ../sass/layouts/_landing.scss */
+  /* line 228, ../sass/layouts/_landing.scss */
   .details .content {
     width: 35%;
     float: right;
   }
 }
-/* line 193, ../sass/layouts/_landing.scss */
+/* line 238, ../sass/layouts/_landing.scss */
 .details .search {
   border-bottom: 5px solid rgba(0, 0, 0, 0.1);
   padding-bottom: 30px;
   margin-bottom: 30px;
 }
-/* line 198, ../sass/layouts/_landing.scss */
+/* line 243, ../sass/layouts/_landing.scss */
 .details .search .wrap, .details .sell .wrap {
   padding: 30px 5% 30px 5%;
   background-color: rgba(31, 50, 70, 0.9);
@@ -2686,11 +3025,11 @@ strong {
   top: -30px;
   z-index: 2;
 }
-/* line 208, ../sass/layouts/_landing.scss */
+/* line 253, ../sass/layouts/_landing.scss */
 .details .sell {
   margin-right: 0;
 }
-/* line 211, ../sass/layouts/_landing.scss */
+/* line 256, ../sass/layouts/_landing.scss */
 .details .ss-icon {
   width: 100%;
   font-size: 80px;
@@ -2704,19 +3043,19 @@ strong {
   top: 20px;
 }
 
-/* line 225, ../sass/layouts/_landing.scss */
+/* line 270, ../sass/layouts/_landing.scss */
 .credit {
   background: black;
   padding: 100px 5%;
 }
-/* line 228, ../sass/layouts/_landing.scss */
+/* line 273, ../sass/layouts/_landing.scss */
 .credit p {
   text-align: center;
   color: rgba(255, 255, 255, 0.6);
   margin-bottom: 10px;
 }
 
-/* line 235, ../sass/layouts/_landing.scss */
+/* line 280, ../sass/layouts/_landing.scss */
 hr {
   border: 0;
   height: 1px;
@@ -2724,6 +3063,92 @@ hr {
   background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
   background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
   background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+/* line 289, ../sass/layouts/_landing.scss */
+.links {
+  width: 100%;
+}
+/* line 292, ../sass/layouts/_landing.scss */
+.links a {
+  width: 100%;
+  padding: 50px 10%;
+  display: table;
+  background: #1f3246;
+  color: white;
+  font-family: "ronnia", "freight-sans-pro";
+  font-size: 28px;
+  float: left;
+  text-align: center;
+  min-height: 300px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+@media only screen and (min-width: 641px) and (max-width: 971px) {
+  /* line 292, ../sass/layouts/_landing.scss */
+  .links a {
+    width: 50%;
+    padding: 100px 4%;
+    font-size: 36px;
+    min-height: 400px;
+  }
+}
+@media only screen and (min-width: 972px) {
+  /* line 292, ../sass/layouts/_landing.scss */
+  .links a {
+    width: 50%;
+    font-size: 48px;
+    min-height: 520px;
+  }
+}
+/* line 320, ../sass/layouts/_landing.scss */
+.links a:hover {
+  text-decoration: none;
+}
+/* line 323, ../sass/layouts/_landing.scss */
+.links a:hover span {
+  font-size: 76px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+/* line 327, ../sass/layouts/_landing.scss */
+.links a.bikes {
+  background-color: #aa83bb;
+}
+/* line 329, ../sass/layouts/_landing.scss */
+.links a.bikes:hover {
+  background-color: #9362a9;
+}
+/* line 333, ../sass/layouts/_landing.scss */
+.links a.list {
+  background-color: #8395bb;
+}
+/* line 335, ../sass/layouts/_landing.scss */
+.links a.list:hover {
+  background-color: #6279a9;
+}
+/* line 339, ../sass/layouts/_landing.scss */
+.links a .wrap {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+/* line 344, ../sass/layouts/_landing.scss */
+.links a span {
+  display: block;
+  margin: 0 0 30px;
+  font-size: 60px;
+}
+/* line 349, ../sass/layouts/_landing.scss */
+.links a em {
+  font-size: 16px;
+  font-weight: 300;
+  display: block;
+  margin-top: 10px;
 }
 
 /* line 1, ../sass/layouts/_interiors.scss */
@@ -2746,31 +3171,31 @@ hr {
   }
 }
 
-/* line 15, ../sass/layouts/_interiors.scss */
+/* line 16, ../sass/layouts/_interiors.scss */
 .page-header {
   padding: 50px 4% 20px;
   background-color: white;
 }
 @media only screen and (min-width: 972px) {
-  /* line 15, ../sass/layouts/_interiors.scss */
+  /* line 16, ../sass/layouts/_interiors.scss */
   .page-header {
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     width: 75%;
     max-width: none;
   }
 }
-/* line 23, ../sass/layouts/_interiors.scss */
+/* line 24, ../sass/layouts/_interiors.scss */
 .page-header h1 {
   font-size: 50px;
 }
 
-/* line 27, ../sass/layouts/_interiors.scss */
+/* line 28, ../sass/layouts/_interiors.scss */
 .bike-list .page-content {
   max-width: 1600px;
 }
 
 @media only screen and (min-width: 972px) {
-  /* line 30, ../sass/layouts/_interiors.scss */
+  /* line 31, ../sass/layouts/_interiors.scss */
   .sidebar-spacing {
     width: 25%;
     max-width: 350px;
@@ -2783,21 +3208,59 @@ hr {
   }
 }
 
-/* line 42, ../sass/layouts/_interiors.scss */
+/* line 43, ../sass/layouts/_interiors.scss */
 dt {
   font-weight: bold;
 }
 @media only screen and (min-width: 972px) {
-  /* line 42, ../sass/layouts/_interiors.scss */
+  /* line 43, ../sass/layouts/_interiors.scss */
   dt {
     float: left;
     width: 35%;
   }
 }
 
-/* line 52, ../sass/layouts/_interiors.scss */
+/* line 53, ../sass/layouts/_interiors.scss */
 dd {
   overflow: hidden;
+}
+
+/* line 59, ../sass/layouts/_interiors.scss */
+.about h3 {
+  font-size: 46px;
+  line-height: 52px;
+  font-weight: 100;
+  margin-top: 30px;
+}
+/* line 65, ../sass/layouts/_interiors.scss */
+.about h4 {
+  font-size: 24px;
+  line-height: 31px;
+  font-weight: 300;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* line 74, ../sass/layouts/_interiors.scss */
+.faqs.page-content, .mission.page-content, .about.page-content {
+  max-width: 900px;
+  padding-left: 14%;
+}
+
+/* line 79, ../sass/layouts/_interiors.scss */
+.faqs h3 {
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 100;
+  margin: 40px 0;
+}
+/* line 85, ../sass/layouts/_interiors.scss */
+.faqs strong {
+  display: block;
+  font-size: 1.2em;
+  line-height: 1.3em;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 /* line 2, ../sass/layouts/_bikes.scss */
@@ -2820,56 +3283,78 @@ dd {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 /* line 17, ../sass/layouts/_bikes.scss */
+.bike-list h2 {
+  margin-bottom: 10px;
+}
+/* line 20, ../sass/layouts/_bikes.scss */
 .bike-list dt, .bike-list dd {
   display: block;
   float: none;
   width: 100%;
   font-size: 1rem;
 }
-/* line 22, ../sass/layouts/_bikes.scss */
+/* line 25, ../sass/layouts/_bikes.scss */
 .bike-list dt p, .bike-list dd p {
   font-size: 1rem;
   line-height: 1.2rem;
   margin-bottom: 10px;
 }
-/* line 31, ../sass/layouts/_bikes.scss */
+/* line 34, ../sass/layouts/_bikes.scss */
 .bike-list .photos {
   width: 45%;
   float: left;
   margin: 0 4% 30px 0;
 }
-/* line 35, ../sass/layouts/_bikes.scss */
+/* line 38, ../sass/layouts/_bikes.scss */
 .bike-list .photos img {
   width: 100%;
 }
-/* line 39, ../sass/layouts/_bikes.scss */
+/* line 42, ../sass/layouts/_bikes.scss */
 .bike-list .flexslider {
   margin: 0;
 }
 @media only screen and (min-width: 641px) and (max-width: 971px) {
-  /* line 42, ../sass/layouts/_bikes.scss */
+  /* line 45, ../sass/layouts/_bikes.scss */
   .bike-list .bike-description {
     width: 50%;
     float: left;
   }
 }
 @media only screen and (min-width: 972px) {
-  /* line 42, ../sass/layouts/_bikes.scss */
+  /* line 45, ../sass/layouts/_bikes.scss */
   .bike-list .bike-description {
     width: 50%;
     float: left;
   }
 }
-/* line 51, ../sass/layouts/_bikes.scss */
+/* line 54, ../sass/layouts/_bikes.scss */
 .bike-list .bike-description ul {
   margin: 20px 0 0;
 }
-/* line 55, ../sass/layouts/_bikes.scss */
+@media only screen and (min-width: 641px) and (max-width: 971px) {
+  /* line 58, ../sass/layouts/_bikes.scss */
+  .bike-list .bike-description .col1, .bike-list .bike-description .col2 {
+    float: left;
+    width: 44%;
+    margin-right: 3%;
+    margin-bottom: 0;
+  }
+}
+@media only screen and (min-width: 972px) {
+  /* line 58, ../sass/layouts/_bikes.scss */
+  .bike-list .bike-description .col1, .bike-list .bike-description .col2 {
+    float: left;
+    width: 44%;
+    margin-right: 3%;
+    margin-bottom: 0;
+  }
+}
+/* line 72, ../sass/layouts/_bikes.scss */
 .bike-list .bike-description li {
   list-style-type: none;
 }
 @media only screen and (min-width: 641px) and (max-width: 971px) {
-  /* line 55, ../sass/layouts/_bikes.scss */
+  /* line 72, ../sass/layouts/_bikes.scss */
   .bike-list .bike-description li {
     float: left;
     width: 44%;
@@ -2878,7 +3363,7 @@ dd {
   }
 }
 @media only screen and (min-width: 972px) {
-  /* line 55, ../sass/layouts/_bikes.scss */
+  /* line 72, ../sass/layouts/_bikes.scss */
   .bike-list .bike-description li {
     float: left;
     width: 44%;
@@ -2886,7 +3371,7 @@ dd {
     margin-bottom: 0;
   }
 }
-/* line 71, ../sass/layouts/_bikes.scss */
+/* line 88, ../sass/layouts/_bikes.scss */
 .bike-list .button {
   clear: both;
   font-size: 14px;
@@ -2900,37 +3385,55 @@ dd {
   border-radius: 3px;
 }
 @media only screen and (min-width: 972px) {
-  /* line 71, ../sass/layouts/_bikes.scss */
+  /* line 88, ../sass/layouts/_bikes.scss */
   .bike-list .button {
     width: inherit;
     float: left;
   }
 }
+/* line 99, ../sass/layouts/_bikes.scss */
+.bike-list .button:hover span {
+  margin-left: 5px;
+}
+/* line 102, ../sass/layouts/_bikes.scss */
+.bike-list .button span {
+  font-weight: 900;
+  position: relative;
+  top: 2px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
 
 /* line 2, ../sass/layouts/_list.scss */
+.submit h1 {
+  margin-bottom: 0;
+}
+/* line 5, ../sass/layouts/_list.scss */
 .submit h2 {
   font-weight: 100;
   font-style: normal;
   font-size: 3rem;
 }
 @media only screen and (min-width: 972px) {
-  /* line 2, ../sass/layouts/_list.scss */
+  /* line 5, ../sass/layouts/_list.scss */
   .submit h2 {
     font-size: 5em;
   }
 }
-/* line 9, ../sass/layouts/_list.scss */
+/* line 12, ../sass/layouts/_list.scss */
 .submit h2 span {
   display: block;
   font-size: 1em;
 }
-/* line 16, ../sass/layouts/_list.scss */
+/* line 19, ../sass/layouts/_list.scss */
 .submit h3 {
   color: #666666;
   font-weight: 100;
   margin-top: 5px;
 }
-/* line 21, ../sass/layouts/_list.scss */
+/* line 24, ../sass/layouts/_list.scss */
 .submit h4 {
   margin-top: 60px;
   font-weight: 900;
@@ -2942,22 +3445,22 @@ dd {
   font-size: 2.5em;
   line-height: 1em;
 }
-/* line 31, ../sass/layouts/_list.scss */
+/* line 34, ../sass/layouts/_list.scss */
 .submit h4 span {
   display: block;
   font-size: 1em;
 }
-/* line 38, ../sass/layouts/_list.scss */
+/* line 41, ../sass/layouts/_list.scss */
 .submit p {
   margin: 0;
 }
-/* line 41, ../sass/layouts/_list.scss */
+/* line 44, ../sass/layouts/_list.scss */
 .submit .lead-in {
   color: #666666;
   margin-top: 40px;
   float: left;
 }
-/* line 47, ../sass/layouts/_list.scss */
+/* line 50, ../sass/layouts/_list.scss */
 .submit form {
   margin: 0 auto;
   min-height: 0;
@@ -2973,7 +3476,7 @@ dd {
 .submit form:after {
   clear: both;
 }
-/* line 53, ../sass/layouts/_list.scss */
+/* line 56, ../sass/layouts/_list.scss */
 .submit form ul {
   padding: 0 10% 40px;
   margin-top: 20px;
@@ -2994,28 +3497,28 @@ dd {
 .submit form ul:after {
   clear: both;
 }
-/* line 64, ../sass/layouts/_list.scss */
+/* line 67, ../sass/layouts/_list.scss */
 .submit form ul li {
   margin: 20px 0;
   clear: both;
   list-style-type: none;
 }
 @media only screen and (min-width: 972px) {
-  /* line 69, ../sass/layouts/_list.scss */
+  /* line 72, ../sass/layouts/_list.scss */
   .submit .name input {
     width: 49%;
   }
 }
-/* line 73, ../sass/layouts/_list.scss */
+/* line 76, ../sass/layouts/_list.scss */
 .submit .name input.fn {
   margin-right: 1%;
 }
-/* line 77, ../sass/layouts/_list.scss */
+/* line 80, ../sass/layouts/_list.scss */
 .submit input[type=submit] {
   width: 100%;
   font-size: 1.3rem;
 }
-/* line 81, ../sass/layouts/_list.scss */
+/* line 84, ../sass/layouts/_list.scss */
 .submit .photo-wrap {
   margin-top: 10px;
   float: left;
@@ -3031,50 +3534,50 @@ dd {
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-/* line 92, ../sass/layouts/_list.scss */
+/* line 95, ../sass/layouts/_list.scss */
 .submit .photo-wrap:hover {
   border: 2px dashed rgba(11, 22, 34, 0.3);
   cursor: pointer;
 }
-/* line 98, ../sass/layouts/_list.scss */
+/* line 101, ../sass/layouts/_list.scss */
 .submit .photos .req {
   top: 5px;
   bottom: auto;
 }
-/* line 104, ../sass/layouts/_list.scss */
+/* line 107, ../sass/layouts/_list.scss */
 .submit .phone input[type=tel] {
   width: 32%;
   max-width: 80px;
   margin-right: 1%;
 }
-/* line 108, ../sass/layouts/_list.scss */
+/* line 111, ../sass/layouts/_list.scss */
 .submit .phone input[type=tel]:last-child {
   margin-right: 0;
   max-width: 100px;
 }
-/* line 115, ../sass/layouts/_list.scss */
+/* line 118, ../sass/layouts/_list.scss */
 .submit .price input[type=text] {
   width: 95%;
   float: right;
 }
-/* line 119, ../sass/layouts/_list.scss */
+/* line 122, ../sass/layouts/_list.scss */
 .submit .price em {
   float: left;
   width: 5%;
   display: block;
 }
-/* line 125, ../sass/layouts/_list.scss */
+/* line 128, ../sass/layouts/_list.scss */
 .submit .more-photos p {
   clear: both;
 }
-/* line 128, ../sass/layouts/_list.scss */
+/* line 131, ../sass/layouts/_list.scss */
 .submit .more-photos a {
   color: #0b1622;
   margin-bottom: 15px;
   clear: both;
   display: block;
 }
-/* line 134, ../sass/layouts/_list.scss */
+/* line 137, ../sass/layouts/_list.scss */
 .submit .terms {
   color: #0b1622;
   font-style: italic;
@@ -3082,26 +3585,26 @@ dd {
   display: block;
   float: left;
 }
-/* line 140, ../sass/layouts/_list.scss */
+/* line 143, ../sass/layouts/_list.scss */
 .submit .terms a {
   color: #0b1622;
   text-decoration: undeline;
 }
-/* line 145, ../sass/layouts/_list.scss */
+/* line 148, ../sass/layouts/_list.scss */
 .submit form .additional-info {
   margin: 30px 0;
   width: 80%;
   clear: both;
   float: left;
 }
-/* line 150, ../sass/layouts/_list.scss */
+/* line 153, ../sass/layouts/_list.scss */
 .submit form .additional-info p, .submit form .additional-info ul, .submit form .additional-info li {
   color: rgba(255, 255, 255, 0.8);
   background: transparent;
   margin-left: 0;
   padding: 0;
 }
-/* line 156, ../sass/layouts/_list.scss */
+/* line 159, ../sass/layouts/_list.scss */
 .submit form .additional-info ul li {
   list-style-type: disc;
   padding: 5px 20px;
@@ -3109,7 +3612,7 @@ dd {
   font-weight: 600;
   margin: 10px 0;
 }
-/* line 163, ../sass/layouts/_list.scss */
+/* line 166, ../sass/layouts/_list.scss */
 .submit form .additional-info ul {
   margin: 0;
 }

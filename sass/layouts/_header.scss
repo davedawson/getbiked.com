@@ -1,6 +1,7 @@
 .header {
   width: 100%;
   background: $color-grey-blue;
+  @include clearfix;
   @include respond-to(wide-screens) {
     position: fixed;
     width: 25%;
@@ -10,6 +11,8 @@
     // background-image: url(/img/gb-bg-tall.jpg);
     height: 100%;
     z-index: 2;
+    overflow: hidden;
+    overflow-y: scroll;
     @include box-sizing(border-box);
   }
   @include respond-to(medium-screens) {
@@ -61,6 +64,9 @@
       }
     }
   }
+  .nav {
+    @include clearfix;
+  }
   .description {
     padding: 25px 10%;
     p {
@@ -73,16 +79,29 @@
     }
     .button {
       margin-bottom: 1em;
+      width: 100%;
+      background: $color-blue;
       @include respond-to(wide-screens) {
-        width: 100%;
         float: left;
-        &.sell {
-          float: right;
+      }
+      @include respond-to(medium-screens) {
+        margin-bottom: 0;
+      }
+    }
+    .nav {
+      .button {
+        @include respond-to(medium-screens) {
+          width: 48%;
+          float: left;
+          &.list {
+            float: right;
+          }
         }
       }
     }
   }
   .signup {
+    margin-top: 10px;
     p {
       font-size: 14px;
       line-height: 18px;
@@ -90,6 +109,78 @@
       color: transparentize($color-white, 0.4);
       clear: both;
       margin: 25px 0 5px;
+      @include respond-to(wide-screens) {
+        font-size: 12px;
+        line-height: 16px;
+      }
+    }
+    span {
+      @include respond-to(wide-screens) {
+        display: none;
+      }
+    }
+    input[type=email] {
+      width:60%;
+      float: left;
+      @include respond-to(wide-screens) {
+        font-size: 12px;
+        padding: 12px 4% 9px;
+      }
+    }
+    input[type=submit] {
+      width: 40%;
+      float: right;
+      -webkit-appearance: none;
+      @include border-radius(0);
+    }
+  }
+  .menu {
+    width: 100%;
+    border-bottom: 1px solid transparentize($color-white, 0.9);
+    @include transition(all 0.2s ease-in-out);
+    a {
+      padding: 20px 5% 20px 14%;
+      color: $color-white;
+      display: block;
+      @include respond-to(medium-screens) {
+        padding: 20px 5% 20px 10%;
+      }
+    }
+    .ss-close {
+      opacity: 0;
+      display: none;
+    }
+    .ss-navigatedown {
+      opacity: 1;
+    }
+    @include respond-to(wide-screens) {
+      display: none;
+    }
+    .ss-icon {
+      position: relative;
+      top: 3px;
+      font-size: 30px;
+      margin-right: 10px;
+      float: right;
+      @include transition(all 0.2s ease-in-out);
+    }
+    &.open {
+      .ss-close {
+        opacity: 1;
+        display: inline-block;
+      }
+      .ss-navigatedown {
+        opacity: 0;
+        display: none;
+      }
+    }
+  }
+  .nav-wrap a {
+
+    &.closed {
+      .close {
+
+      }
     }
   }
 }

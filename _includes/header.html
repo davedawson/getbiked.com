@@ -43,9 +43,6 @@
       {% include 'includes/navigation' %}
       <div class="sidebar-spacing">
       </div>
-      <div class="page-header">
-        <h1>{{title}}</h1>
-      </div>
     {% endunless %}
 
-    <div class="page-content">
+    <div class="page-content {{meta['Page class']}}">
