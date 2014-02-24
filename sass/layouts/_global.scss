@@ -9,7 +9,7 @@ body {
 p, ol, ul, li, dl, dt, dd {
   font-family: $type-sans;
   font-size: 1.2rem;
-  line-height: 1.45rem;
+  line-height: 1.6rem;
   font-weight: 300;
 }
 p {
@@ -34,6 +34,7 @@ h2 {
   font-family: $type-sans;
   font-size: 32px;
   font-weight: bold;
+  margin-bottom: 15px;
 }
 h3 {
   font-family: $type-sans;

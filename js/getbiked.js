@@ -22,6 +22,7 @@ jQuery(document).ready(function() {
       $( ".nav-wrap" ).slideToggle( "fast", function() {
         // Animation complete.
         $('.menu').toggleClass('open');
+        return false;
       });
     });
   enquire.register("screen and (min-width:972px)", function() {

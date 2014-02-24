@@ -1,0 +1,180 @@
+.education {
+  .page-content {
+    @include respond-to(wide-screens) {
+
+    }
+  }
+  .content-block {
+    margin-top: 80px;
+    article {
+      max-width: 700px;
+      position: relative;
+      z-index: 2;
+      @include respond-to(wide-screens) {
+        padding-left: 11%;
+        float: left;
+        width: 75%;
+      }
+      @include respond-to(extra-wide-screens) {
+        width: 100%;
+      }
+      p:first-child {
+        font-size: 46px;
+        line-height: 52px;
+        font-weight: 100;
+        // margin-top: 30px;
+      }
+    }
+    .byline {
+      width: 100%;
+      float: none;
+      position: relative;
+      z-index: 2;
+      @include respond-to(wide-screens) {
+        width: 20%;
+        float: right;
+        margin-left: 3%;
+      }
+      p {
+        font-size: 14px;
+        font-style: italic;
+        color: $color-grey-blue;
+      }
+    }
+  }
+  .illustrator-credit p {
+    font-size: 14px !important;
+    font-style: italic;
+    opacity: 0.4;
+  }
+}
+header {
+  width: 100%;
+  padding: 0;
+  position: relative;
+  height: 650px;
+  overflow: visible;
+  overflow-x: visible;
+  @include respond-to(wide-screens) {
+    padding-left: 11%;
+  }
+  @include borderBox;
+  h1 {
+    position: relative;
+    z-index: 2;
+  }
+}
+.illo-wrap {
+  position: relative;
+  z-index:1;
+  img {
+    width: 100%;
+  }
+}
+.education .content-block .signup {
+  margin-top: 10px;
+  clear: both;
+  @include respond-to(wide-screens) {
+    width: 65%;
+    padding-left: 11%;
+  }
+  p {
+    font-weight: bold;
+    clear: both;
+    margin: 25px 0 5px;
+
+  }
+  span {
+    @include respond-to(wide-screens) {
+      display: none;
+    }
+  }
+  input[type=email] {
+    width:60%;
+    float: left;
+    @include respond-to(wide-screens) {
+      font-size: 12px;
+      padding: 12px 4% 9px;
+    }
+  }
+  input[type=submit] {
+    width: 40%;
+    float: right;
+    -webkit-appearance: none;
+    @include border-radius(0);
+  }
+  p {
+
+  }
+}
+.get-biked-intro {
+  background: url('/img/education/intro/intro-bg-texture.jpg') repeat-x;
+  background-position: 0 -310px;
+  @include respond-to(wide-screens) {
+    background-position: 0 -563px;
+  }
+  @include respond-to(extra-wide-screens) {
+    background-position: 0 -480px;
+  }
+  .illo-wrap {
+    position: relative;
+    width: 75%;
+    margin: 20px auto;
+    @include respond-to(medium-screens) {
+      width: 350px;
+      position: absolute;
+      right: -20%;
+      top: -50px;
+      margin: 0;
+    }
+
+    @include respond-to(wide-screens) {
+      width: 400px;
+      position: absolute;
+      right: -15%;
+      bottom: 0;
+      margin: 0;
+    }
+    @include respond-to(extra-wide-screens) {
+      width: 540px;
+      position: absolute;
+      right: -22%;
+      bottom: -20px;
+      margin: 0;
+    }
+  }
+  article {
+    @include respond-to(extra-wide-screens) {
+      margin-top: -150px;
+    }
+  }
+  .author {
+
+  }
+  header {
+    // background: url('/img/education/intro/intro-bg-texture.jpg') repeat-y;
+    height: auto;
+    @include respond-to(medium-screens) {
+      height: 180px;
+    }
+    @include respond-to(wide-screens) {
+      height: 300px;
+    }
+    @include respond-to(extra-wide-screens) {
+      height: 429px;
+    }
+
+    h1 {
+      @include respond-to(wide-screens) {
+        font-size: 64px;
+        width: 70%;
+        margin: 75px 0%;
+      }
+      @include respond-to(extra-wide-screens) {
+        font-size: 94px;
+        width: 60%;
+        margin: 80px 0%;
+      }
+    }
+  }
+}

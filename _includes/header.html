@@ -2,18 +2,36 @@
 <html>
   <head>
     <meta charset=utf-8 />
-    <title>Get Biked</title>
+    <title>Get Biked &#8226; {{title}}</title>
     <link href="favicon.ico" rel="icon" type="image/x-icon" />
     <meta name="description" content="A hand picked email list of bikes for sale in New York City.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@getbiked">
+    <meta name="twitter:creator" content="@davedawson">
     <meta property="og:" content="Get Biked"/>
     <meta property="og:type" content="website"/>
-    <meta property="og:url" content="http://www.getbiked.com/"/>
-    <meta property="og:image" content="http://www.getbiked.com/img/gb-fb.jpg"/>
     <meta property="og:site_name" content="Get Biked"/>
     <meta property="fb:admins" content="iamdavedawson"/>
+  {% unless parent.slug == "bikes" %}
+    <meta property="og:title" content="Get Biked"/>
+    <meta property="og:url" content="http://www.getbiked.com/"/>
+    <meta property="og:image" content="http://www.getbiked.com/img/gb-fb.jpg"/>
+    <meta property="fb:admins" content="iamdavedawson"/>
     <meta property="og:description"
-          content="An email list of bikes for sale in New York City."/>
+        content="A hand picked email list of bikes for sale in New York City."/>
+  {% endunless %}
+  {% if parent.slug == "bikes" %}
+    <meta property="og:url" content="{{permalink}}/"/>
+    <meta property="og:title" content="Bike for sale: {{title}}"/>
+    <meta name="twitter:title" content="Bike for sale: {{title}}">
+  {% for asset in assets limit:1 %}
+    <meta property="og:image" content="{{asset.permalink}}"/>
+    <meta name="twitter:image:src" content="{{asset.permalink}}">
+  {% endfor %}
+    <meta property="og:description"
+        content="{{body_raw | truncate:200}}"/>
+  {% endif %}
     <!--[if lt IE 9]>
       <script src="/js/html5shiv.js"></script>
     <![endif]-->
@@ -38,11 +56,11 @@
 
     </script>
   </head>
-    <body{% if url == "/" %} class="landing"{% endif %}>
+    <body{% if url == "/" %} class="landing"{% endif %}{% if parent.title == "Education" %} class="education {{meta['Page class']}}"{% else %} class="{{meta['Page class']}}"{% endif %}>
     {% unless url == "/" %}
       {% include 'includes/navigation' %}
       <div class="sidebar-spacing">
       </div>
     {% endunless %}
 
-    <div class="page-content {{meta['Page class']}}">
+    <div class="page-content">

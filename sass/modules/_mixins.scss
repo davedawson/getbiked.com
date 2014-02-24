@@ -47,8 +47,11 @@ $mq-desktop           : 972px;
 $mq-desktop-max       : 1400px;
 
 @mixin respond-to($media) {
+  @if $media == extra-wide-screens {
+    @media only screen and (min-width: $mq-desktop-max) { @content; }
+  }
   @if $media == wide-screens {
-    @media only screen and (min-width: $mq-desktop ) { @content; }
+    @media only screen and (min-width: $mq-desktop) { @content; }
   }
   @else if $media == medium-screens {
     @media only screen and (min-width: $mq-mobile-landscape + 1) and (max-width: $mq-desktop - 1) { @content; }

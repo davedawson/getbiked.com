@@ -1,0 +1,76 @@
+{% for post in site.pages.bikes.posts %}
+  {% for asset in post.assets limit:1 %}
+    <a class="button" href="{{post.permalink}}"><img align="none" height="373" src="{{asset.url}}" style="font-size:12px; line-height:1.6em; margin-top:10px; opacity:0.9" width="560" /></a>
+  {% endfor %}
+
+<h2 width="560" style="font-family: Helvetica, Arial, sans-serif;font-weight:bold;font-size:24px;line-height:1em;width:560px; margin: 20px 0 10px 0;">
+  <a class="button" href="{{post.permalink}}" style="color: #0b1622; text-decoration: none;">{{post.title}}</a>
+</h2>
+
+<table border="0" cellpadding="0" cellspacing="0" id="templateColumns" style="color: #0b1622;" width="560">
+  <tbody>
+    <tr>
+      <td align="center" class="templateColumnContainer" valign="top" width="50%">
+        <table border="0" cellpadding="10" cellspacing="0" width="100%">
+          <tbody>
+            <tr>
+              <td class="leftColumnContent" valign="top" style="padding:0;">
+                  <strong style="font-family: Helvetica, Arial, sans-serif;font-weight:bold;font-size:14px;line-height:1em;">
+                    Make &amp; model:
+                  </strong>
+                  <span style="font-family: Helvetica, Arial, sans-serif;font-weight:normal;font-size:14px;line-height:1em; margin-bottom: 8px; display: block">
+                    {{post.meta['Make & Model']}}
+                  </span>
+
+                  <strong style="font-family: Helvetica, Arial, sans-serif;font-weight:bold;font-size:14px;line-height:1em;">
+                    Asking price:
+                  </strong>
+                  <span style="font-family: Helvetica, Arial, sans-serif;font-weight:normal;font-size:14px;line-height:1em; margin-bottom: 8px; display: block">
+                    {{post.meta['Price']}}
+                  </span>
+
+                {% if {{post.meta['Bike Size']}} %}
+                  <strong style="font-family: Helvetica, Arial, sans-serif;font-weight:bold;font-size:14px;line-height:1em;">
+                    Size:
+                  </strong>
+                  <span style="font-family: Helvetica, Arial, sans-serif;font-weight:normal;font-size:14px;line-height:1em; margin-bottom: 8px; display: block">
+                    {{post.meta['Bike Size']}}
+                {% endif %}
+                  </span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+
+      <td align="center" class="templateColumnContainer" valign="top" width="50%">
+        <table border="0" cellpadding="10" cellspacing="0" width="100%">
+          <tbody>
+            <tr>
+              <td class="rightColumnContent" valign="top" style="padding: 0 0 0 5px;">
+                <strong style="font-family: Helvetica, Arial, sans-serif;font-weight:bold;font-size:14px;line-height:1em;">Gears:</strong>
+                <span style="font-family: Helvetica, Arial, sans-serif;font-weight:normal;font-size:14px;line-height:1em; margin-bottom: 8px; display: block">{{post.meta['Gears']}}</span>
+
+                <strong style="font-family: Helvetica, Arial, sans-serif;font-weight:bold;font-size:14px;line-height:1em;">Condition:</strong>
+                <span style="font-family: Helvetica, Arial, sans-serif;font-weight:normal;font-size:14px;line-height:1em; margin-bottom: 8px; display: block">{{post.meta['Condition']}}</span>
+
+                <strong style="font-family: Helvetica, Arial, sans-serif;font-weight:bold;font-size:14px;line-height:1em;">Neighborhood:</strong>
+                <span style="font-family: Helvetica, Arial, sans-serif;font-weight:normal;font-size:14px;line-height:1em; margin-bottom: 8px; display: block">{{post.meta['Neighborhood']}}</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>
+  <a class="button" href="{{post.permalink}}" style="font-family: Helvetica, Arial, sans-serif;font-weight:bold;font-size: 14px; padding: 5px 16px; background-color: rgb(31, 50, 70); color: white; text-transform: uppercase; letter-spacing: 0.2em; text-decoration: none; width: 528px; display: block;text-align:center;" target="_self">
+    VIEW THIS BIKE&#39;S DETAILS ON GETBIKED.COM&nbsp;&rarr;
+  </a>
+</p>
+
+<div>&nbsp;</div>
+
+{% endfor%}

@@ -2,7 +2,7 @@
 
 <div class="container bike-list">
   <h1>{{title}}</h1>
-  {% for post in posts limit:20 %}
+  {% for post in posts %}
     <article class="entry" id="{{post.title | downcase | remove: ' '}}">
       <div class="photos">
         <ul>
@@ -28,10 +28,16 @@
           <dd>{{post.meta['Make & Model'] | markdown:true}}</dd>
           <dt>Asking price:</dt>
           <dd>{{post.meta['Price'] | markdown:true}}</dd>
+          {% if {{post.meta['Bike Size']}} %}
+            <dt>Size:</dt>
+            <dd>{{post.meta['Bike Size'] | markdown:true}}</dd>
+          {% endif %}
         </div>
         <div class="col2">
           <dt>Gears:</dt>
           <dd>{{post.meta['Gears'] | markdown:true}}</dd>
+          <dt>Condition:</dt>
+          <dd>{{post.meta['Condition'] | markdown:true}}</dd>
           <dt>Neighborhood:</dt>
           <dd>{{post.meta['Neighborhood'] | markdown:true}}</dd>
         </div>

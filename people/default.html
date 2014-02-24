@@ -1,0 +1,8 @@
+{% include 'includes/header' %}
+  <h1>{{title}}</h1>
+  {% for asset in assets %}
+    <div class="pic"><img src="{{asset.url}}" alt="{{title}}" /></div>
+  {% endfor %}
+  {{body}}
+
+{% include 'includes/footer' %}

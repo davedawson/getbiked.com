@@ -1,7 +1,6 @@
 {% include 'includes/header' %}
   <h1>{{title}}</h1>
   <div class="photos">
-    {% if assets.size > 1 %}
     <div class="flexslider">
       <ul class="slides">
         {% for asset in assets %}
@@ -9,9 +8,7 @@
         {% endfor %}
         </ul>
       </div>
-    {% else %}
       <img src="{{asset.url}}">
-    {% endif %}
   </div>
   <dl>
     <dt>Description:</dt>

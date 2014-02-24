@@ -55,7 +55,7 @@ dd {
   overflow: hidden;
 }
 
-.about {
+.about .page-content {
   h3 {
     font-size: 46px;
     line-height: 52px;
@@ -71,11 +71,12 @@ dd {
   }
 }
 
-.faqs.page-content, .mission.page-content, .about.page-content {
+.faqs .page-content, .mission .page-content, .about .page-content, .terms .page-content, .people .page-content {
   max-width: 900px;
   padding-left: 14%;
+
 }
-.faqs {
+.faqs .page-content {
   h3 {
     font-size: 28px;
     line-height: 36px;
