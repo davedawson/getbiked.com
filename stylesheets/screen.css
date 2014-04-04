@@ -4080,30 +4080,50 @@ header h1 {
 /* line 80, ../sass/layouts/_anatomy.scss */
 .anatomy header h1 {
   float: left;
+  margin: 0;
 }
-/* line 83, ../sass/layouts/_anatomy.scss */
+/* line 84, ../sass/layouts/_anatomy.scss */
 .anatomy header h2 {
   float: right;
   font-size: 16px;
-  position: relative;
+  position: absolute;
   bottom: 0;
+  right: 0;
   font-weight: 600;
+  margin: 0;
 }
-/* line 91, ../sass/layouts/_anatomy.scss */
+/* line 93, ../sass/layouts/_anatomy.scss */
+.anatomy header .wrap {
+  min-height: 0;
+  height: 100%;
+  position: relative;
+}
+/* line 33, ../sass/modules/_mixins.scss */
+.anatomy header .wrap:before, .anatomy header .wrap:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+/* line 34, ../sass/modules/_mixins.scss */
+.anatomy header .wrap:after {
+  clear: both;
+}
+/* line 99, ../sass/layouts/_anatomy.scss */
 .anatomy .nav {
   position: relative;
   z-index: 2;
   width: 100%;
 }
 @media only screen and (min-width: 641px) {
-  /* line 91, ../sass/layouts/_anatomy.scss */
+  /* line 99, ../sass/layouts/_anatomy.scss */
   .anatomy .nav {
     width: 180px;
     float: left;
     margin-left: 5%;
   }
 }
-/* line 100, ../sass/layouts/_anatomy.scss */
+/* line 108, ../sass/layouts/_anatomy.scss */
 .anatomy .nav li {
   font-size: 16px;
   font-weight: 300;
@@ -4113,23 +4133,23 @@ header h1 {
   padding: 0 2% 15px 2%;
 }
 @media only screen and (min-width: 641px) {
-  /* line 100, ../sass/layouts/_anatomy.scss */
+  /* line 108, ../sass/layouts/_anatomy.scss */
   .anatomy .nav li {
     border-bottom: 0;
     padding: 0;
   }
 }
-/* line 111, ../sass/layouts/_anatomy.scss */
+/* line 119, ../sass/layouts/_anatomy.scss */
 .anatomy .nav li a {
   font-weight: 300;
   width: 100%;
   display: block;
 }
-/* line 116, ../sass/layouts/_anatomy.scss */
+/* line 124, ../sass/layouts/_anatomy.scss */
 .anatomy .nav li.active a {
   font-weight: 600;
 }
-/* line 121, ../sass/layouts/_anatomy.scss */
+/* line 129, ../sass/layouts/_anatomy.scss */
 .anatomy .desc {
   position: relative;
   z-index: 2;
@@ -4140,7 +4160,7 @@ header h1 {
   transition: all 0.2s ease-in-out;
 }
 @media only screen and (min-width: 641px) {
-  /* line 121, ../sass/layouts/_anatomy.scss */
+  /* line 129, ../sass/layouts/_anatomy.scss */
   .anatomy .desc {
     position: absolute;
     left: 180px;
@@ -4152,7 +4172,7 @@ header h1 {
     border-left: 2px solid white;
   }
 }
-/* line 136, ../sass/layouts/_anatomy.scss */
+/* line 144, ../sass/layouts/_anatomy.scss */
 .anatomy .desc li {
   font-size: 13px;
   line-height: 17px;
@@ -4160,17 +4180,18 @@ header h1 {
   border: 0;
   padding: 0;
 }
-/* line 143, ../sass/layouts/_anatomy.scss */
+/* line 151, ../sass/layouts/_anatomy.scss */
 .anatomy .desc h3 {
   font-size: 18px;
   margin: 0;
 }
-/* line 147, ../sass/layouts/_anatomy.scss */
+/* line 155, ../sass/layouts/_anatomy.scss */
 .anatomy .desc p {
-  font-size: 13px;
+  font-size: 16px;
   line-height: 17px;
+  margin: 0;
 }
-/* line 152, ../sass/layouts/_anatomy.scss */
+/* line 161, ../sass/layouts/_anatomy.scss */
 .anatomy .diagram {
   height: 500px;
   margin-top: 140px;
@@ -4178,7 +4199,7 @@ header h1 {
   width: 100%;
 }
 @media only screen and (min-width: 641px) {
-  /* line 152, ../sass/layouts/_anatomy.scss */
+  /* line 161, ../sass/layouts/_anatomy.scss */
   .anatomy .diagram {
     width: 100%;
     position: absolute;
@@ -4190,24 +4211,24 @@ header h1 {
   }
 }
 @media only screen and (min-width: 641px) and (max-width: 971px) {
-  /* line 152, ../sass/layouts/_anatomy.scss */
+  /* line 161, ../sass/layouts/_anatomy.scss */
   .anatomy .diagram {
     height: 600px;
   }
 }
 @media only screen and (min-width: 972px) {
-  /* line 152, ../sass/layouts/_anatomy.scss */
+  /* line 161, ../sass/layouts/_anatomy.scss */
   .anatomy .diagram {
     height: 800px;
   }
 }
 @media only screen and (min-width: 1400px) {
-  /* line 152, ../sass/layouts/_anatomy.scss */
+  /* line 161, ../sass/layouts/_anatomy.scss */
   .anatomy .diagram {
     height: 1200px;
   }
 }
-/* line 183, ../sass/layouts/_anatomy.scss */
+/* line 192, ../sass/layouts/_anatomy.scss */
 .anatomy .icon {
   width: 100%;
   position: absolute;
@@ -4219,24 +4240,24 @@ header h1 {
   transition: all 0.2s ease-in-out;
 }
 @media only screen and (min-width: 641px) and (max-width: 971px) {
-  /* line 183, ../sass/layouts/_anatomy.scss */
+  /* line 192, ../sass/layouts/_anatomy.scss */
   .anatomy .icon {
     font-size: 25em;
   }
 }
 @media only screen and (min-width: 972px) {
-  /* line 183, ../sass/layouts/_anatomy.scss */
+  /* line 192, ../sass/layouts/_anatomy.scss */
   .anatomy .icon {
     font-size: 40em;
   }
 }
 @media only screen and (min-width: 1400px) {
-  /* line 183, ../sass/layouts/_anatomy.scss */
+  /* line 192, ../sass/layouts/_anatomy.scss */
   .anatomy .icon {
     font-size: 60em;
   }
 }
-/* line 200, ../sass/layouts/_anatomy.scss */
+/* line 209, ../sass/layouts/_anatomy.scss */
 .anatomy li.icon {
   color: #e6fdfd;
 }
