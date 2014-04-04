@@ -96,6 +96,13 @@
           &.list {
             float: right;
           }
+          &.learn {
+            width: 100%;
+            float: none;
+            position: relative;
+            top: 15px;
+            clear: both;
+          }
         }
       }
     }

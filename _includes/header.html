@@ -57,7 +57,7 @@
     </script>
   </head>
     <body{% if url == "/" %} class="landing"{% endif %}{% if parent.title == "Education" %} class="education {{meta['Page class']}}"{% else %} class="{{meta['Page class']}}"{% endif %}>
-    {% unless url == "/" %}
+    {% unless url == "/" or url == "/education/anatomy" %}
       {% include 'includes/navigation' %}
       <div class="sidebar-spacing">
       </div>

@@ -56,6 +56,9 @@ $mq-desktop-max       : 1400px;
   @else if $media == medium-screens {
     @media only screen and (min-width: $mq-mobile-landscape + 1) and (max-width: $mq-desktop - 1) { @content; }
   }
+  @else if $media == medium-and-above {
+    @media only screen and (min-width: $mq-mobile-landscape + 1) { @content; }
+  }
   @else if $media == handhelds {
     @media only screen and (max-width: $mq-mobile-landscape) { @content; }
   }

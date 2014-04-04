@@ -1,0 +1,203 @@
+@font-face {
+  font-family: 'icomoon';
+  src:url('/webfonts/anatomy/anatomy.eot?4u8ofv');
+  src:url('/webfonts/anatomy/anatomy.eot?#iefix4u8ofv') format('embedded-opentype'),
+    url('/webfonts/anatomy/anatomy.woff?4u8ofv') format('woff'),
+    url('/webfonts/anatomy/anatomy.ttf?4u8ofv') format('truetype'),
+    url('/webfonts/anatomy/anatomy.svg?4u8ofv#anatomy') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-wheels:before {
+  content: "\e600";
+}
+.icon-seat:before {
+  content: "\e601";
+}
+.icon-full-bike:before {
+  content: "\e602";
+}
+.icon-frame:before {
+  content: "\e603";
+}
+.icon-crank:before {
+  content: "\e604";
+}
+.icon-brakes:before {
+  content: "\e605";
+}
+
+
+.anatomy {
+  background: #1d2124;
+  color: $color-white;
+  @extent clearfix;
+  .page-content {
+    width: 100%;
+    padding: 0;
+  }
+  a {
+    color: $color-white;
+  }
+  li {
+    list-style-type: none;
+  }
+  .wrap {
+    margin: 0 auto;
+  }
+  article {
+    position: relative;
+    top: 130px;
+    @include clearfix;
+    height: 100%;
+    width: 100%;
+    @include respond-to(medium-and-above) {
+      top: 200px;
+    }
+
+  }
+  header {
+    height: auto;
+    padding: 25px 5%;
+    border-bottom: 1px solid transparentize($color-white, 0.2);
+    position: absolute;
+    width: 100%;
+    h1 {
+      float: left;
+    }
+    h2 {
+      float: right;
+      font-size: 16px;
+      position: relative;
+      bottom: 0;
+      font-weight: 600;
+    }
+  }
+  .nav {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    @include respond-to(medium-and-above) {
+      width: 180px;
+      float: left;
+      margin-left: 5%;
+    }
+    li {
+      font-size: 16px;
+      font-weight: 300;
+      margin-bottom: 10px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid $color-white;
+      padding: 0 2% 15px 2%;
+      @include respond-to(medium-and-above) {
+        border-bottom: 0;
+        padding: 0;
+      }
+      a {
+        font-weight: 300;
+        width: 100%;
+        display: block;
+      }
+      &.active a {
+        font-weight: 600;
+      }
+    }
+  }
+  .desc {
+    position: relative;
+    z-index: 2;
+    margin-top: 15px;
+    @include transition(all 0.2s ease-in-out);
+    @include respond-to(medium-and-above) {
+      position: absolute;
+      left: 180px;
+      width: 320px;
+      top: 0;
+      margin-top: 0;
+      padding: 0 20px 20px;
+      background: transparentize(#1d2124, 0.6);
+      border-left: 2px solid $color-white;
+    }
+    li {
+      font-size: 13px;
+      line-height: 17px;
+      margin-bottom: 10px;
+      border: 0;
+      padding: 0;
+    }
+    h3 {
+      font-size: 18px;
+      margin: 0;
+    }
+    p {
+      font-size: 13px;
+      line-height: 17px;
+    }
+  }
+  .diagram {
+
+    // overflow: hidden;
+    // background: url('/img/education/anatomy/full-bike.svg') no-repeat center center;
+    // background-size: 60em;
+    height: 500px;
+    margin-top: 140px;
+    overflow: hidden;
+    width: 100%;
+    @include respond-to(medium-and-above) {
+      width: 100%;
+      position: absolute;
+      top: 130px;
+      z-index: 1;
+      overflow: hidden;
+      height: 1200px;
+      margin-top: 0;
+    }
+    @include respond-to(medium-screens) {
+      height: 600px
+    }
+    @include respond-to(wide-screens) {
+      height: 800px;
+    }
+    @include respond-to(extra-wide-screens) {
+      height: 1200px;
+    }
+    img {
+
+    }
+  }
+  .icon {
+    width: 100%;
+    position: absolute;
+    color: #97999b;
+    font-size: 12em;
+    @include transition(all 0.2s ease-in-out);
+    @include respond-to(medium-screens) {
+      font-size: 25em;
+    }
+    @include respond-to(wide-screens) {
+      font-size: 40em;
+    }
+    @include respond-to(extra-wide-screens) {
+      font-size: 60em;
+      // height: 500px;
+    }
+  }
+  li.icon {
+    color: $color-light-blue;
+  }
+}
