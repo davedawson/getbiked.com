@@ -293,7 +293,7 @@ hr {
     width: 100%;
     padding: 50px 10%;
     display: table;
-    background: $color-blue;
+    background-color: $color-blue;
     color: $color-white;
     font-family: $type-sans;
     font-size: 28px;
@@ -350,11 +350,28 @@ hr {
         background-color: darken(#8395bb, 10%);
       }
     }
-    &.education-form {
-      background-color: darken(#c1e5e5, 10%);
-      color: $color-blue;
+    &.anatomy {
+      background-color: #1d2124;
+      color: $color-white;
+      position: relative;
+      overflow: hidden;
+      height: 400px;
+      &:before {
+        font-size: 20em;
+      }
       &:hover {
-        background-color: darken(#c1e5e5, 20%);
+        background-color: darken(#1d2124, 10%);
+      }
+      .icon {
+        position: absolute;
+        font-size: 12em;
+        top: 90px;
+        left: -30%;
+        z-index: 1;
+      }
+      strong, p, em {
+        position: relative;
+        z-index: 2;
       }
       em {
         font-size: 20px;

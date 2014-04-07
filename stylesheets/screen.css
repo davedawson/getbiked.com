@@ -3115,7 +3115,7 @@ hr {
   width: 100%;
   padding: 50px 10%;
   display: table;
-  background: #1f3246;
+  background-color: #1f3246;
   color: white;
   font-family: "ronnia", "freight-sans-pro";
   font-size: 28px;
@@ -3187,47 +3187,67 @@ hr {
   background-color: #6279a9;
 }
 /* line 353, ../sass/layouts/_landing.scss */
-.links a.education-form {
-  background-color: #9dd6d6;
-  color: #1f3246;
-}
-/* line 356, ../sass/layouts/_landing.scss */
-.links a.education-form:hover {
-  background-color: #79c7c7;
+.links a.anatomy {
+  background-color: #1d2124;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  height: 400px;
 }
 /* line 359, ../sass/layouts/_landing.scss */
-.links a.education-form em {
+.links a.anatomy:before {
+  font-size: 20em;
+}
+/* line 362, ../sass/layouts/_landing.scss */
+.links a.anatomy:hover {
+  background-color: #060708;
+}
+/* line 365, ../sass/layouts/_landing.scss */
+.links a.anatomy .icon {
+  position: absolute;
+  font-size: 12em;
+  top: 90px;
+  left: -30%;
+  z-index: 1;
+}
+/* line 372, ../sass/layouts/_landing.scss */
+.links a.anatomy strong, .links a.anatomy p, .links a.anatomy em {
+  position: relative;
+  z-index: 2;
+}
+/* line 376, ../sass/layouts/_landing.scss */
+.links a.anatomy em {
   font-size: 20px;
   line-height: 24px;
   margin-top: 20px;
 }
 @media only screen and (min-width: 641px) and (max-width: 971px) {
   /* line 353, ../sass/layouts/_landing.scss */
-  .links a.education-form {
+  .links a.anatomy {
     width: 100%;
     min-height: 200px;
   }
 }
 @media only screen and (min-width: 972px) {
   /* line 353, ../sass/layouts/_landing.scss */
-  .links a.education-form {
+  .links a.anatomy {
     width: 100%;
     min-height: 400px;
   }
 }
-/* line 373, ../sass/layouts/_landing.scss */
+/* line 390, ../sass/layouts/_landing.scss */
 .links a .wrap {
   display: table-cell;
   text-align: center;
   vertical-align: middle;
 }
-/* line 378, ../sass/layouts/_landing.scss */
+/* line 395, ../sass/layouts/_landing.scss */
 .links a span {
   display: block;
   margin: 0 0 30px;
   font-size: 60px;
 }
-/* line 383, ../sass/layouts/_landing.scss */
+/* line 400, ../sass/layouts/_landing.scss */
 .links a em {
   font-size: 16px;
   font-weight: 300;
