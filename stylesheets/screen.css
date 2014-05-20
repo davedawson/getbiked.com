@@ -1699,7 +1699,7 @@ html:hover .ss-icon {
 }
 
 /* line 25, ../sass/modules/_mixins.scss */
-.textFieldClean, input[type=email], input[type=text], input[type=tel], textarea {
+.textFieldClean, input[type=email], input[type=text], input[type=tel], textarea, .header .signup input[type=email] {
   border: 0;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -1781,18 +1781,20 @@ input[type=submit] {
   text-transform: uppercase;
   letter-spacing: 0.2em;
   -webkit-appearance: none;
+  height: auto !important;
+  line-height: 100%;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
-/* line 37, ../sass/modules/_forms.scss */
+/* line 39, ../sass/modules/_forms.scss */
 input[type=submit]:hover {
   background: black;
   cursor: pointer;
 }
 
-/* line 43, ../sass/modules/_forms.scss */
+/* line 45, ../sass/modules/_forms.scss */
 form label {
   font-family: "ronnia", "freight-sans-pro";
   color: #0b1622;
@@ -1806,20 +1808,20 @@ form label {
   line-height: 1.4rem;
 }
 @media only screen and (min-width: 972px) {
-  /* line 54, ../sass/modules/_forms.scss */
+  /* line 56, ../sass/modules/_forms.scss */
   form label p {
     float: left;
     width: 75%;
   }
 }
-/* line 60, ../sass/modules/_forms.scss */
+/* line 62, ../sass/modules/_forms.scss */
 form label em {
   display: block;
   font-weight: 100;
   font-style: italic;
 }
 
-/* line 67, ../sass/modules/_forms.scss */
+/* line 69, ../sass/modules/_forms.scss */
 .req {
   color: #ff7992;
   margin-left: 2px;
@@ -1829,7 +1831,7 @@ form label em {
   margin-top: 5px;
 }
 @media only screen and (min-width: 972px) {
-  /* line 67, ../sass/modules/_forms.scss */
+  /* line 69, ../sass/modules/_forms.scss */
   .req {
     float: right;
     width: 20%;
@@ -2223,9 +2225,10 @@ body {
   text-rendering: optimizeLegibility;
   position: relative;
   height: 100%;
+  font-family: "ronnia", "freight-sans-pro";
 }
 
-/* line 9, ../sass/layouts/_global.scss */
+/* line 10, ../sass/layouts/_global.scss */
 p, ol, ul, li, dl, dt, dd {
   font-family: "ronnia", "freight-sans-pro";
   font-size: 1.2rem;
@@ -2233,17 +2236,17 @@ p, ol, ul, li, dl, dt, dd {
   font-weight: 300;
 }
 
-/* line 15, ../sass/layouts/_global.scss */
+/* line 16, ../sass/layouts/_global.scss */
 p {
   margin-bottom: 20px;
 }
 
-/* line 18, ../sass/layouts/_global.scss */
+/* line 19, ../sass/layouts/_global.scss */
 li {
   list-style-type: disc;
 }
 
-/* line 21, ../sass/layouts/_global.scss */
+/* line 22, ../sass/layouts/_global.scss */
 h1 {
   font-family: "ronnia", "freight-sans-pro";
   font-size: 42px;
@@ -2251,19 +2254,19 @@ h1 {
   font-weight: 900;
 }
 @media only screen and (min-width: 972px) {
-  /* line 21, ../sass/layouts/_global.scss */
+  /* line 22, ../sass/layouts/_global.scss */
   h1 {
     font-size: 64px;
   }
 }
 @media only screen and (min-width: 641px) and (max-width: 971px) {
-  /* line 21, ../sass/layouts/_global.scss */
+  /* line 22, ../sass/layouts/_global.scss */
   h1 {
     font-size: 56px;
   }
 }
 
-/* line 33, ../sass/layouts/_global.scss */
+/* line 34, ../sass/layouts/_global.scss */
 h2 {
   font-family: "ronnia", "freight-sans-pro";
   font-size: 32px;
@@ -2271,7 +2274,7 @@ h2 {
   margin-bottom: 15px;
 }
 
-/* line 39, ../sass/layouts/_global.scss */
+/* line 40, ../sass/layouts/_global.scss */
 h3 {
   font-family: "ronnia", "freight-sans-pro";
   font-size: 26px;
@@ -2281,7 +2284,7 @@ h3 {
   margin-bottom: 10px;
 }
 
-/* line 48, ../sass/layouts/_global.scss */
+/* line 49, ../sass/layouts/_global.scss */
 h4 {
   font-family: "ronnia", "freight-sans-pro";
   font-size: 18px;
@@ -2289,7 +2292,7 @@ h4 {
   margin-bottom: 10px;
 }
 
-/* line 55, ../sass/layouts/_global.scss */
+/* line 56, ../sass/layouts/_global.scss */
 a {
   color: #0b1622;
   font-weight: 600;
@@ -2299,22 +2302,27 @@ a {
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
-/* line 60, ../sass/layouts/_global.scss */
+/* line 61, ../sass/layouts/_global.scss */
 a:hover {
   text-decoration: underline;
 }
 
-/* line 65, ../sass/layouts/_global.scss */
+/* line 66, ../sass/layouts/_global.scss */
 strong {
   font-weight: 600;
 }
 
-/* line 68, ../sass/layouts/_global.scss */
+/* line 69, ../sass/layouts/_global.scss */
 .hide {
   display: none;
 }
 
-/* line 76, ../sass/layouts/_global.scss */
+/* line 72, ../sass/layouts/_global.scss */
+.container {
+  position: relative;
+}
+
+/* line 78, ../sass/layouts/_global.scss */
 .pic img {
   max-width: 100%;
 }
@@ -2514,6 +2522,10 @@ strong {
 .header .signup input[type=email] {
   width: 60%;
   float: left;
+  border: 1px solid #cccccc;
+  padding: 0.6em 0.5em;
+  font-size: 1rem;
+  height: auto;
 }
 @media only screen and (min-width: 972px) {
   /* line 129, ../sass/layouts/_header.scss */
@@ -2522,7 +2534,7 @@ strong {
     padding: 12px 4% 9px;
   }
 }
-/* line 137, ../sass/layouts/_header.scss */
+/* line 142, ../sass/layouts/_header.scss */
 .header .signup input[type=submit] {
   width: 40%;
   float: right;
@@ -2533,7 +2545,7 @@ strong {
   -o-border-radius: 0;
   border-radius: 0;
 }
-/* line 144, ../sass/layouts/_header.scss */
+/* line 149, ../sass/layouts/_header.scss */
 .header .menu {
   width: 100%;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -2542,34 +2554,34 @@ strong {
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
-/* line 148, ../sass/layouts/_header.scss */
+/* line 153, ../sass/layouts/_header.scss */
 .header .menu a {
   padding: 20px 5% 20px 14%;
   color: white;
   display: block;
 }
 @media only screen and (min-width: 641px) and (max-width: 971px) {
-  /* line 148, ../sass/layouts/_header.scss */
+  /* line 153, ../sass/layouts/_header.scss */
   .header .menu a {
     padding: 20px 5% 20px 10%;
   }
 }
-/* line 156, ../sass/layouts/_header.scss */
+/* line 161, ../sass/layouts/_header.scss */
 .header .menu .ss-close {
   opacity: 0;
   display: none;
 }
-/* line 160, ../sass/layouts/_header.scss */
+/* line 165, ../sass/layouts/_header.scss */
 .header .menu .ss-navigatedown {
   opacity: 1;
 }
 @media only screen and (min-width: 972px) {
-  /* line 144, ../sass/layouts/_header.scss */
+  /* line 149, ../sass/layouts/_header.scss */
   .header .menu {
     display: none;
   }
 }
-/* line 166, ../sass/layouts/_header.scss */
+/* line 171, ../sass/layouts/_header.scss */
 .header .menu .ss-icon {
   position: relative;
   top: 3px;
@@ -2581,12 +2593,12 @@ strong {
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
-/* line 175, ../sass/layouts/_header.scss */
+/* line 180, ../sass/layouts/_header.scss */
 .header .menu.open .ss-close {
   opacity: 1;
   display: inline-block;
 }
-/* line 179, ../sass/layouts/_header.scss */
+/* line 184, ../sass/layouts/_header.scss */
 .header .menu.open .ss-navigatedown {
   opacity: 0;
   display: none;
@@ -4280,4 +4292,60 @@ header h1 {
 /* line 209, ../sass/layouts/_anatomy.scss */
 .anatomy li.icon {
   color: #e6fdfd;
+}
+
+@media only screen and (min-width: 641px) {
+  /* line 2, ../sass/layouts/_gear.scss */
+  #product .image-wrap {
+    width: 50%;
+    float: left;
+  }
+}
+@media only screen and (min-width: 641px) {
+  /* line 8, ../sass/layouts/_gear.scss */
+  #product .description-wrap {
+    width: 40%;
+    float: right;
+  }
+}
+@media only screen and (min-width: 641px) {
+  /* line 14, ../sass/layouts/_gear.scss */
+  #product h1 {
+    width: 85%;
+    position: relative;
+    z-index: 2;
+  }
+}
+
+/* line 22, ../sass/layouts/_gear.scss */
+.toolbar-wrapper {
+  height: 51px;
+  margin-top: -50px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 20px !important;
+  margin-bottom: 15px;
+  width: 100%;
+}
+@media only screen and (min-width: 641px) {
+  /* line 22, ../sass/layouts/_gear.scss */
+  .toolbar-wrapper {
+    position: absolute;
+    z-index: 1;
+    margin: 0;
+    border: 0;
+    padding: 0;
+  }
+}
+
+/* line 38, ../sass/layouts/_gear.scss */
+#cart {
+  font-family: "ronnia", "freight-sans-pro";
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  font-weight: 300;
+}
+
+/* line 45, ../sass/layouts/_gear.scss */
+.toolbar, .toolbar.span12 {
+  width: auto;
 }

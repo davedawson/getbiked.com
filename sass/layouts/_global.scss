@@ -4,6 +4,7 @@ body {
   text-rendering: optimizeLegibility;
   position: relative;
   height: 100%;
+  font-family: $type-sans;
 }
 
 p, ol, ul, li, dl, dt, dd {
@@ -71,6 +72,7 @@ strong {
 .container {
   // max-width: 800px;
   // margin: 0 auto;
+  position: relative;
 }
 .pic {
   img {

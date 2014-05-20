@@ -129,6 +129,11 @@
     input[type=email] {
       width:60%;
       float: left;
+      @extend .textFieldClean;
+       border: 1px solid lighten($color-black, 80%);
+       padding: 0.6em 0.5em;
+       font-size: 1rem;
+       height: auto;
       @include respond-to(wide-screens) {
         font-size: 12px;
         padding: 12px 4% 9px;

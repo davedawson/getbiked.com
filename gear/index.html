@@ -1,0 +1,52 @@
+{% include 'includes/header' %}
+
+<div class="container bike-list">
+  <h1>{{title}}</h1>
+  {% for post in posts %}
+    <article class="entry" id="{{post.title | downcase | remove: ' '}}">
+      <div class="photos">
+        <ul>
+          {% for asset in post.assets limit:1 %}
+            <li><a href="{{post.url}}"><img src="{{asset.url}}"></a></li>
+          {% endfor %}
+        </ul>
+      <!--
+        <div class="flexslider">
+          <ul class="slides">
+            {% for asset in post.assets limit:1 %}
+                <li><img src="{{asset.url}}"></li>
+            {% endfor %}
+          </ul>
+        </div>
+      -->
+      </div>
+
+      <div class="bike-description">
+        <h2><a href="{{post.url}}">{{post.title}}</a></h2>
+        <div class="col1">
+          <dt>Designed by:</dt>
+          <dd>{{post.meta['gear-designer'] | markdown:true}}</dd>
+          <dt>Price:</dt>
+          <dd>{{post.meta['Price'] | markdown:true}}</dd>
+          {% if {{post.meta['Bike Size']}} %}
+            <dt>Size:</dt>
+            <dd>{{post.meta['Bike Size'] | markdown:true}}</dd>
+          {% endif %}
+        </div>
+        <div class="col2">
+          <dt>Gears:</dt>
+          <dd>{{post.meta['Gears'] | markdown:true}}</dd>
+          <dt>Condition:</dt>
+          <dd>{{post.meta['Condition'] | markdown:true}}</dd>
+          <dt>Neighborhood:</dt>
+          <dd>{{post.meta['Neighborhood'] | markdown:true}}</dd>
+        </div>
+        <p><a href="{{post.url}}" class="button">Full Bike Details <span class="ss-icon">navigateright</span></a></p>
+      </div>
+
+    </article>
+  {% endfor%}
+</div>
+
+
+{% include 'includes/footer' %}

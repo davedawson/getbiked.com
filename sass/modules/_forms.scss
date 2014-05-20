@@ -33,6 +33,8 @@ input[type=submit] {
  text-transform: uppercase;
  letter-spacing: 0.2em;
  -webkit-appearance: none;
+ height: auto !important;
+ line-height: 100%;
  @include transition(all 0.2s ease-in-out);
  &:hover {
    background: darken($color-dark-blue, 40%);
