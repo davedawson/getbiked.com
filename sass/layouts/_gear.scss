@@ -26,6 +26,7 @@
     margin: 0;
     border: 0;
     padding: 0;
+    top: -50px;
   }
   height: 51px;
   margin-top: -50px;
@@ -44,4 +45,8 @@
 
 .toolbar, .toolbar.span12 {
   width: auto;
+}
+
+.span12 {
+  width: 100%;
 }

@@ -1,4 +1,4 @@
-.button {
+.button, .btn {
   background: $color-blue;
   color: $color-white;
   display: block;
@@ -14,6 +14,7 @@
   &:hover {
     background: darken($color-blue, 20%);
     text-decoration: none;
+    color: $color-white;
   }
 }
 

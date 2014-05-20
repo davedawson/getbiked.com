@@ -93,15 +93,11 @@
         @include respond-to(medium-screens) {
           width: 48%;
           float: left;
-          &.list {
+          &.list, &.gear {
             float: right;
           }
-          &.learn {
-            width: 100%;
-            float: none;
-            position: relative;
-            top: 15px;
-            clear: both;
+          &.learn, &.gear {
+            margin-top: 15px;
           }
         }
       }
